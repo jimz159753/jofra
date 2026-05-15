@@ -1,0 +1,354 @@
+/* ══════════════════════════════════════════════
+   NAVBAR — dos estados: transparente y scrolled
+══════════════════════════════════════════════ */
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: var(--nav-height);
+  z-index: var(--z-sticky);
+  /* Estado inicial: encima del hero oscuro → sin fondo */
+  background: transparent;
+  transition:
+    background var(--transition-base),
+    box-shadow var(--transition-base),
+    backdrop-filter var(--transition-base);
+}
+
+/* ── Al hacer scroll: fondo frosted glass claro ── */
+.scrolled {
+  background: rgba(232, 244, 244, 0.93);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  box-shadow: 0 1px 0 rgba(26, 60, 64, 0.08), var(--shadow-sm);
+}
+
+/* ── Inner layout ─────────────────────────────── */
+.inner {
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: 0 var(--space-10);
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-10);
+}
+
+/* ══════════════════════════════════════════════
+   LOGO
+══════════════════════════════════════════════ */
+.logoBtn {
+  display: flex;
+  flex-direction: column;
+  line-height: 1;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  flex-shrink: 0;
+  text-align: left;
+}
+
+/* Transparente: logo blanco */
+.logoText {
+  font-family: var(--font-heading);
+  font-size: var(--text-2xl);
+  font-weight: var(--weight-medium);
+  color: #fff;
+  letter-spacing: 0.02em;
+  transition: color var(--transition-base);
+  text-shadow: 0 1px 12px rgba(0, 0, 0, 0.3);
+}
+
+.logoSub {
+  font-family: var(--font-body);
+  font-size: var(--text-xs);
+  font-weight: var(--weight-light);
+  color: rgba(255, 255, 255, 0.65);
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  transition: color var(--transition-base);
+}
+
+/* Scrolled: logo teal */
+.scrolled .logoBtn .logoText {
+  color: var(--color-deep-teal);
+  text-shadow: none;
+}
+.scrolled .logoBtn .logoSub {
+  color: var(--color-text-muted);
+}
+
+/* ══════════════════════════════════════════════
+   DESKTOP NAV LINKS
+══════════════════════════════════════════════ */
+.desktopNav {
+  display: flex;
+  align-items: center;
+  gap: var(--space-8);
+}
+
+/* Transparente: links blancos */
+.navLink {
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
+  font-weight: var(--weight-semibold);
+  color: rgba(255, 255, 255, 0.85);
+  letter-spacing: 0.05em;
+  background: none;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  padding: var(--space-2) 0;
+  transition: color var(--transition-fast);
+  text-shadow: 0 1px 6px rgba(0, 0, 0, 0.35);
+}
+
+.navLink::after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--color-sand);
+  border-radius: 2px;
+  transition: width var(--transition-base);
+}
+
+.navLink:hover {
+  color: #fff;
+}
+
+.navLink.active {
+  color: var(--color-sand-light);
+}
+
+.navLink:hover::after,
+.navLink.active::after {
+  width: 100%;
+}
+
+/* Scrolled: links charcoal → teal */
+.scrolled .navLink {
+  color: var(--color-charcoal);
+  text-shadow: none;
+  font-weight: var(--weight-medium);
+}
+
+.scrolled .navLink:hover {
+  color: var(--color-deep-teal);
+}
+
+.scrolled .navLink.active {
+  color: var(--color-deep-teal);
+}
+
+/* ══════════════════════════════════════════════
+   ACTIONS (lang toggle + CTA + hamburger)
+══════════════════════════════════════════════ */
+.actions {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  flex-shrink: 0;
+}
+
+/* Lang toggle — transparente: blanco */
+.langToggle {
+  font-family: var(--font-body);
+  font-size: var(--text-xs);
+  font-weight: var(--weight-bold);
+  letter-spacing: 0.1em;
+  color: rgba(255, 255, 255, 0.85);
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  border-radius: var(--radius-full);
+  padding: var(--space-1) var(--space-3);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  backdrop-filter: blur(4px);
+}
+
+.langToggle:hover {
+  background: rgba(255, 255, 255, 0.22);
+  border-color: rgba(255, 255, 255, 0.6);
+  color: #fff;
+}
+
+/* Scrolled: lang toggle oscuro */
+.scrolled .langToggle {
+  color: var(--color-charcoal);
+  background: none;
+  border-color: var(--color-mist-dark);
+  backdrop-filter: none;
+}
+
+.scrolled .langToggle:hover {
+  background: var(--color-deep-teal);
+  color: var(--color-white);
+  border-color: var(--color-deep-teal);
+}
+
+/* CTA WhatsApp link */
+.ctaLink {
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
+  font-weight: var(--weight-semibold);
+  letter-spacing: 0.04em;
+  color: var(--color-white);
+  background: var(--color-deep-teal);
+  border: 1px solid transparent;
+  border-radius: var(--radius-full);
+  padding: var(--space-2) var(--space-5);
+  text-decoration: none;
+  white-space: nowrap;
+  transition: background var(--transition-fast), color var(--transition-fast);
+}
+
+.ctaLink:hover {
+  background: var(--color-teal-mid);
+}
+
+.scrolled .ctaLink {
+  background: var(--color-deep-teal);
+  color: var(--color-white);
+}
+
+/* ── Hamburger ──────────────────────────────── */
+.menuToggle {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 36px;
+  height: 36px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  padding: 8px;
+  transition: background var(--transition-fast), border-color var(--transition-fast);
+}
+
+.menuToggle:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.menuToggle span {
+  display: block;
+  height: 2px;
+  background: #fff;
+  border-radius: 2px;
+  transition: all var(--transition-base);
+  transform-origin: center;
+}
+
+/* Scrolled: hamburger oscuro */
+.scrolled .menuToggle {
+  background: transparent;
+  border-color: var(--color-mist-dark);
+}
+
+.scrolled .menuToggle span {
+  background: var(--color-charcoal);
+}
+
+.scrolled .menuToggle:hover {
+  background: var(--color-mist);
+}
+
+/* Open state */
+.menuToggle.open span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+.menuToggle.open span:nth-child(2) {
+  opacity: 0;
+  transform: scaleX(0);
+}
+.menuToggle.open span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* ══════════════════════════════════════════════
+   MOBILE MENU DRAWER
+══════════════════════════════════════════════ */
+.mobileMenu {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: min(300px, 82vw);
+  background: var(--color-white);
+  z-index: calc(var(--z-sticky) + 1);
+  padding: calc(var(--nav-height) + var(--space-6)) var(--space-8) var(--space-8);
+  display: flex;
+  flex-direction: column;
+  box-shadow: var(--shadow-xl);
+}
+
+.mobileLink {
+  display: block;
+  width: 100%;
+  text-align: left;
+  font-family: var(--font-heading);
+  font-size: var(--text-2xl);
+  font-weight: var(--weight-light);
+  color: var(--color-charcoal);
+  background: none;
+  border: none;
+  border-bottom: 1px solid var(--color-mist);
+  padding: var(--space-4) 0;
+  cursor: pointer;
+  transition: color var(--transition-fast), padding-left var(--transition-base);
+}
+
+.mobileLink:hover {
+  color: var(--color-deep-teal);
+  padding-left: var(--space-2);
+}
+
+.mobileLink.active {
+  color: var(--color-deep-teal);
+  font-weight: var(--weight-medium);
+}
+
+.langToggleMobile {
+  margin-top: auto;
+  padding-top: var(--space-6);
+  background: none;
+  border: none;
+  font-family: var(--font-body);
+  font-size: var(--text-base);
+  color: var(--color-text-muted);
+  cursor: pointer;
+  text-align: left;
+}
+
+.backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  z-index: var(--z-sticky);
+  backdrop-filter: blur(2px);
+}
+
+/* ══════════════════════════════════════════════
+   RESPONSIVE
+══════════════════════════════════════════════ */
+@media (max-width: 768px) {
+  .desktopNav { display: none; }
+  .menuToggle { display: flex; }
+
+  /* Ocultar el botón CTA en móvil, dejar lang + hamburger */
+  .actions > *:not(.menuToggle):not(.langToggle) {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .langToggle { display: none; }
+}

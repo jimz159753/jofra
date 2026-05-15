@@ -1,0 +1,164 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About Jofra",
+    "services": "Therapies",
+    "sessions": "Sessions",
+    "contact": "Contact",
+    "bookSession": "Book a session"
+  },
+  "hero": {
+    "tagline": "Sound Breath Therapist",
+    "subtitle": "Healing through sound and breath",
+    "description": "Discover the transformative power of sound healing and breathwork therapy. An inner journey toward peace, balance, and deep healing.",
+    "cta_primary": "Book your session",
+    "cta_secondary": "Explore therapies",
+    "scroll_hint": "Scroll to discover"
+  },
+  "about": {
+    "label": "About me",
+    "title": "Jofra",
+    "subtitle": "Sound & Breath Guide",
+    "bio_1": "My name is Jofra and for years I have explored the connection between sound, breath, and human wellbeing. What began as a personal search became my vocation: accompanying others on their healing journey.",
+    "bio_2": "Through deep practice with Tibetan bowls, gongs, and breathwork techniques, I have developed an integrative approach that reconnects body, mind, and spirit. Each session is a sacred space of transformation.",
+    "quote": "\"Sound is the bridge between the outer world and the inner universe\"",
+    "certifications": "Training & Certifications",
+    "cert_1": "Sound Healing Certification — International Sound Academy",
+    "cert_2": "Transformational Breathwork Training",
+    "cert_3": "Advanced practice with Tibetan and crystal bowls",
+    "cert_4": "Meditation and mindfulness facilitator",
+    "stats": {
+      "experience": "Years of experience",
+      "sessions": "Sessions completed",
+      "clients": "Lives transformed"
+    }
+  },
+  "services": {
+    "label": "Therapies",
+    "title": "Choose your healing path",
+    "subtitle": "Each modality is designed to guide your being into a state of deep calm and restoration",
+    "duration": "Duration",
+    "price": "From",
+    "book": "Book session",
+    "learn_more": "Learn more",
+    "sound": {
+      "title": "Sound Healing",
+      "desc": "Immerse yourself in a sound bath with Tibetan bowls, gongs, and lyres. The vibrations penetrate every cell of your body, dissolving energetic blockages and restoring natural balance.",
+      "duration": "60 — 90 min",
+      "price": "$80"
+    },
+    "breath": {
+      "title": "Breathwork",
+      "desc": "Conscious breathing techniques that activate your parasympathetic nervous system, release accumulated tension, and expand your capacity for presence and inner connection.",
+      "duration": "60 min",
+      "price": "$70"
+    },
+    "fusion": {
+      "title": "Sound Breath Fusion",
+      "desc": "The perfect synergy: we combine conscious breathing with sound bath for a profound transformation experience. The most complete therapy I offer.",
+      "duration": "90 — 120 min",
+      "price": "$120"
+    },
+    "group": {
+      "title": "Group Session",
+      "desc": "Share the experience with an intimate group. The collective energy amplifies the healing effect of sound and breath. Ideal for companies, retreats, and communities.",
+      "duration": "90 min",
+      "price": "$40/person"
+    }
+  },
+  "experience": {
+    "label": "The Experience",
+    "title": "What is a session like?",
+    "subtitle": "A four-stage journey toward deep restoration",
+    "steps": {
+      "arrival": {
+        "title": "Arrival & presence",
+        "desc": "We begin with a brief conversation to understand your intention. We create a safe and sacred space for your experience."
+      },
+      "breathwork": {
+        "title": "Breathwork preparation",
+        "desc": "Guided breathing techniques that calm the mind and open the body to receive the vibrations of sound."
+      },
+      "soundbath": {
+        "title": "Sound bath",
+        "desc": "Lying comfortably, I envelop you in layers of therapeutic sound. The vibrations work on cellular and energetic levels."
+      },
+      "integration": {
+        "title": "Integration",
+        "desc": "A time for silence and reflection. We share the experience and I guide you back to the present with full awareness."
+      }
+    },
+    "testimonials": {
+      "label": "Testimonials",
+      "title": "What those who have lived the experience say"
+    },
+    "testimonial_1": {
+      "text": "The session with Jofra was one of the deepest experiences of my life. The sound of the bowls brought me to a state of peace I had never felt before.",
+      "name": "María G.",
+      "role": "Healthcare professional"
+    },
+    "testimonial_2": {
+      "text": "I arrived with chronic anxiety and left feeling brand new. The combination of breathing and sound is simply magical. I've already booked my next session.",
+      "name": "Carlos M.",
+      "role": "Entrepreneur"
+    },
+    "testimonial_3": {
+      "text": "Jofra creates a space of total trust and safety. Her presence is healing in itself. The therapy changed my relationship with my own body.",
+      "name": "Laura P.",
+      "role": "Artist"
+    }
+  },
+  "sessions": {
+    "label": "Schedule",
+    "title": "Book your session",
+    "subtitle": "Take the first step toward your transformation",
+    "form": {
+      "name": "Full name",
+      "email": "Email address",
+      "phone": "Phone (optional)",
+      "session_type": "Session type",
+      "message": "What would you like to work on or heal?",
+      "submit": "Send request",
+      "sending": "Sending...",
+      "success": "Message sent! I will contact you soon to confirm your session.",
+      "error": "There was an error. Please try again or write to me directly.",
+      "name_required": "Name is required",
+      "email_required": "Email is required",
+      "email_invalid": "Please enter a valid email",
+      "session_required": "Please select a session type"
+    }
+  },
+  "faq": {
+    "label": "FAQ",
+    "title": "Frequently asked questions",
+    "subtitle": "Everything you need to know before your first session",
+    "q1": "Do I need previous meditation experience?",
+    "a1": "No. Sessions are accessible to everyone, regardless of experience. You only need to arrive with an open mind and willingness to experience.",
+    "q2": "What should I wear to the session?",
+    "a2": "Comfortable, loose clothing. We provide a blanket, pillow, and eye mask. You don't need to bring anything special.",
+    "q3": "How often should I have sessions?",
+    "a3": "For optimal results, I recommend starting with weekly sessions during the first month, then spacing them according to your needs. Many clients enjoy a monthly session as a maintenance practice.",
+    "q4": "Is breathwork safe for everyone?",
+    "a4": "Breathwork has contraindications. Please inform about medical conditions (pregnancy, heart conditions, epilepsy) before the session. I always adapt techniques to each person.",
+    "q5": "Can I combine these therapies with medical treatments?",
+    "a5": "Yes. These therapies are complementary and do not replace medical treatment. Many health professionals recommend sound healing as a therapeutic complement.",
+    "q6": "Do you offer online sessions?",
+    "a6": "I currently offer in-person sessions. Online breathwork sessions are available upon consultation.",
+    "q7": "What is the cancellation policy?",
+    "a7": "You can cancel or reschedule with 24 hours notice at no cost. Late cancellations may require payment of 50% of the session fee."
+  },
+  "footer": {
+    "tagline": "Healing through sound and breath",
+    "quote": "\"Every breath is an opportunity to be reborn\"",
+    "quick_links": "Quick links",
+    "social": "Follow me",
+    "newsletter": {
+      "title": "Receive inspiration",
+      "subtitle": "Meditations, techniques, and group session dates",
+      "placeholder": "Your email address",
+      "button": "Subscribe",
+      "success": "Welcome to the community!"
+    },
+    "copyright": "© 2024 Jofra Sound Breath. All rights reserved."
+  }
+}

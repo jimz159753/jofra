@@ -1,0 +1,164 @@
+{
+  "nav": {
+    "home": "Inicio",
+    "about": "Sobre Jofra",
+    "services": "Terapias",
+    "sessions": "Sesiones",
+    "contact": "Contacto",
+    "bookSession": "Agenda tu sesión"
+  },
+  "hero": {
+    "tagline": "Sound Breath Therapist",
+    "subtitle": "Sanación a través del sonido y la respiración",
+    "description": "Descubre el poder transformador de la terapia de sonido y la respiración consciente. Un viaje interior hacia la paz, el equilibrio y la sanación profunda.",
+    "cta_primary": "Agenda tu sesión",
+    "cta_secondary": "Conoce las terapias",
+    "scroll_hint": "Desplázate para descubrir"
+  },
+  "about": {
+    "label": "Sobre mí",
+    "title": "Jofra",
+    "subtitle": "Guía de sonido y respiración",
+    "bio_1": "Mi nombre es Jofra y durante años he explorado la conexión entre el sonido, la respiración y el bienestar del ser humano. Lo que comenzó como una búsqueda personal se convirtió en mi vocación: acompañar a otros en su camino de sanación.",
+    "bio_2": "A través de la práctica profunda con cuencos tibetanos, gongs y técnicas de breathwork, he desarrollado un enfoque integrador que reconecta cuerpo, mente y espíritu. Cada sesión es un espacio sagrado de transformación.",
+    "quote": "\"El sonido es el puente entre el mundo exterior y el universo interior\"",
+    "certifications": "Formación y Certificaciones",
+    "cert_1": "Certificación en Sound Healing — Academia Internacional de Sonido",
+    "cert_2": "Formación en Breathwork Transformacional",
+    "cert_3": "Práctica avanzada en cuencos tibetanos y cristalinos",
+    "cert_4": "Facilitadora de meditación y mindfulness",
+    "stats": {
+      "experience": "Años de experiencia",
+      "sessions": "Sesiones realizadas",
+      "clients": "Vidas transformadas"
+    }
+  },
+  "services": {
+    "label": "Terapias",
+    "title": "Elige tu camino de sanación",
+    "subtitle": "Cada modalidad está diseñada para llevar a tu ser a un estado de profunda calma y restauración",
+    "duration": "Duración",
+    "price": "Desde",
+    "book": "Reservar sesión",
+    "learn_more": "Saber más",
+    "sound": {
+      "title": "Sound Healing",
+      "desc": "Sumérgete en un baño de sonido con cuencos tibetanos, gongs y liras. Las vibraciones penetran cada célula de tu cuerpo, disolviendo bloqueos energéticos y restaurando el equilibrio natural.",
+      "duration": "60 — 90 min",
+      "price": "$80"
+    },
+    "breath": {
+      "title": "Breathwork",
+      "desc": "Técnicas de respiración consciente que activan tu sistema nervioso parasimpático, liberan tensiones acumuladas y expanden tu capacidad de presencia y conexión interior.",
+      "duration": "60 min",
+      "price": "$70"
+    },
+    "fusion": {
+      "title": "Sound Breath Fusion",
+      "desc": "La sinergia perfecta: combinamos la respiración consciente con el baño de sonido para una experiencia de transformación profunda. La terapia más completa que ofrezco.",
+      "duration": "90 — 120 min",
+      "price": "$120"
+    },
+    "group": {
+      "title": "Sesión Grupal",
+      "desc": "Comparte la experiencia con un grupo íntimo. La energía colectiva amplifica el efecto sanador del sonido y la respiración. Ideal para empresas, retiros y comunidades.",
+      "duration": "90 min",
+      "price": "$40/persona"
+    }
+  },
+  "experience": {
+    "label": "La Experiencia",
+    "title": "¿Cómo es una sesión?",
+    "subtitle": "Un viaje de cuatro etapas hacia la restauración profunda",
+    "steps": {
+      "arrival": {
+        "title": "Llegada y presencia",
+        "desc": "Comenzamos con una conversación breve para entender tu intención. Creamos un espacio seguro y sagrado para tu experiencia."
+      },
+      "breathwork": {
+        "title": "Preparación con respiración",
+        "desc": "Técnicas de respiración guiada que calman la mente y abren el cuerpo para recibir las vibraciones del sonido."
+      },
+      "soundbath": {
+        "title": "Baño de sonido",
+        "desc": "Recostado en comodidad, te envuelvo en capas de sonido terapéutico. Las vibraciones trabajan en niveles celulares y energéticos."
+      },
+      "integration": {
+        "title": "Integración",
+        "desc": "Un tiempo de silencio y reflexión. Compartimos la experiencia y te llevo de regreso al presente con plena consciencia."
+      }
+    },
+    "testimonials": {
+      "label": "Testimonios",
+      "title": "Lo que dicen quienes han vivido la experiencia"
+    },
+    "testimonial_1": {
+      "text": "La sesión con Jofra fue una de las experiencias más profundas de mi vida. El sonido de los cuencos me llevó a un estado de paz que nunca había sentido antes.",
+      "name": "María G.",
+      "role": "Profesional de salud"
+    },
+    "testimonial_2": {
+      "text": "Llegué con ansiedad crónica y salí sintiéndome como nueva. La combinación de respiración y sonido es simplemente mágica. Ya reservé mi siguiente sesión.",
+      "name": "Carlos M.",
+      "role": "Emprendedor"
+    },
+    "testimonial_3": {
+      "text": "Jofra crea un espacio de total confianza y seguridad. Su presencia es sanadora en sí misma. La terapia cambió mi relación con mi propio cuerpo.",
+      "name": "Laura P.",
+      "role": "Artista"
+    }
+  },
+  "sessions": {
+    "label": "Agenda",
+    "title": "Reserva tu sesión",
+    "subtitle": "Da el primer paso hacia tu transformación",
+    "form": {
+      "name": "Nombre completo",
+      "email": "Correo electrónico",
+      "phone": "Teléfono (opcional)",
+      "session_type": "Tipo de sesión",
+      "message": "¿Qué te gustaría trabajar o sanar?",
+      "submit": "Enviar solicitud",
+      "sending": "Enviando...",
+      "success": "¡Mensaje enviado! Te contactaré pronto para confirmar tu sesión.",
+      "error": "Hubo un error. Por favor intenta de nuevo o escríbeme directamente.",
+      "name_required": "El nombre es requerido",
+      "email_required": "El correo es requerido",
+      "email_invalid": "Por favor ingresa un correo válido",
+      "session_required": "Selecciona un tipo de sesión"
+    }
+  },
+  "faq": {
+    "label": "FAQ",
+    "title": "Preguntas frecuentes",
+    "subtitle": "Todo lo que necesitas saber antes de tu primera sesión",
+    "q1": "¿Necesito experiencia previa en meditación?",
+    "a1": "No. Las sesiones son accesibles para todo tipo de personas, independientemente de su experiencia. Solo necesitas llegar con mente abierta y disposición para la experiencia.",
+    "q2": "¿Qué debo usar para la sesión?",
+    "a2": "Ropa cómoda y suelta. Te proporcionamos manta, cojín y parche para los ojos. No necesitas traer nada especial.",
+    "q3": "¿Con qué frecuencia debo tener sesiones?",
+    "a3": "Para resultados óptimos, recomiendo iniciar con sesiones semanales durante el primer mes, luego espaciarlas según tus necesidades. Muchos clientes disfrutan una sesión mensual como práctica de mantenimiento.",
+    "q4": "¿Es seguro el breathwork para todos?",
+    "a4": "El breathwork tiene contraindicaciones. Por favor informa sobre condiciones médicas (embarazo, problemas cardíacos, epilepsia) antes de la sesión. Siempre adapto las técnicas a cada persona.",
+    "q5": "¿Puedo combinar estas terapias con tratamientos médicos?",
+    "a5": "Sí. Estas terapias son complementarias y no sustituyen el tratamiento médico. Muchos profesionales de salud recomiendan el sound healing como complemento terapéutico.",
+    "q6": "¿Ofrecen sesiones en línea?",
+    "a6": "Actualmente ofrezco sesiones presenciales. Las sesiones online de breathwork están disponibles bajo consulta.",
+    "q7": "¿Cuál es la política de cancelación?",
+    "a7": "Puedes cancelar o reprogramar con 24 horas de anticipación sin costo. Cancelaciones tardías pueden requerir el pago del 50% de la sesión."
+  },
+  "footer": {
+    "tagline": "Sanando a través del sonido y la respiración",
+    "quote": "\"Cada respiración es una oportunidad de renacer\"",
+    "quick_links": "Links rápidos",
+    "social": "Sígueme",
+    "newsletter": {
+      "title": "Recibe inspiración",
+      "subtitle": "Meditaciones, técnicas y fechas de sesiones grupales",
+      "placeholder": "Tu correo electrónico",
+      "button": "Suscribirme",
+      "success": "¡Bienvenido/a a la comunidad!"
+    },
+    "copyright": "© 2024 Jofra Sound Breath. Todos los derechos reservados."
+  }
+}

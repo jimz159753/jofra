@@ -1,0 +1,37 @@
+.section {
+  padding: var(--section-padding) 0;
+  background: var(--color-background);
+  scroll-margin-top: var(--nav-height);
+}
+
+.compact {
+  padding-top: var(--space-8);
+}
+
+.dark {
+  background: var(--color-deep-teal);
+  color: var(--color-white);
+}
+
+.dark h1,
+.dark h2,
+.dark h3,
+.dark h4,
+.dark h5,
+.dark h6 {
+  color: var(--color-white);
+}
+
+.dark p {
+  color: var(--color-white-70);
+}
+
+.container {
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: 0 var(--container-padding);
+}
+
+.narrow {
+  max-width: 800px;
+}

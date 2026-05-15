@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "PowerShell(Get-ChildItem \"C:\\\\Users\\\\Luis Jimenez\\\\repos\\\\Jofra\\\\src\" -Recurse -File | Where-Object { $_.Name -ne \"vite-env.d.ts\" -and $_.Name -ne \"i18n.ts\" } | Select-Object Name, DirectoryName)",
+      "Bash(npm run *)"
+    ]
+  }
+}

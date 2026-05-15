@@ -1,0 +1,98 @@
+.header {
+  text-align: center;
+  margin-bottom: var(--space-12);
+}
+
+.title {
+  font-size: var(--text-4xl);
+  font-weight: var(--weight-light);
+  color: var(--color-deep-teal);
+  margin: var(--space-3) 0 var(--space-4);
+}
+
+.subtitle {
+  font-size: var(--text-lg);
+  color: var(--color-text-muted);
+  max-width: 480px;
+  margin: 0 auto;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.item {
+  background: var(--color-white);
+  border: 1.5px solid var(--color-mist-dark);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  transition: border-color var(--transition-base), box-shadow var(--transition-base);
+}
+
+.itemOpen {
+  border-color: var(--color-teal-light);
+  box-shadow: var(--shadow-md);
+}
+
+.question {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: var(--space-5) var(--space-6);
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  gap: var(--space-4);
+  font-family: var(--font-heading);
+  font-size: var(--text-xl);
+  font-weight: var(--weight-medium);
+  color: var(--color-charcoal);
+  line-height: var(--leading-snug);
+  transition: color var(--transition-fast);
+}
+
+.question:hover { color: var(--color-deep-teal); }
+
+.itemOpen .question { color: var(--color-deep-teal); }
+
+.icon {
+  flex-shrink: 0;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: var(--color-mist);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--text-lg);
+  color: var(--color-teal-mid);
+  transition: background var(--transition-base), color var(--transition-base);
+}
+
+.itemOpen .icon {
+  background: var(--color-deep-teal);
+  color: var(--color-white);
+}
+
+.answer {
+  overflow: hidden;
+  max-height: 0;
+  opacity: 0;
+  transition: max-height 0.38s ease, opacity 0.28s ease;
+}
+
+.itemOpen .answer {
+  max-height: 400px;
+  opacity: 1;
+}
+
+.answer p {
+  padding: 0 var(--space-6) var(--space-5);
+  font-size: var(--text-base);
+  color: var(--color-text-light);
+  line-height: var(--leading-relaxed);
+}
