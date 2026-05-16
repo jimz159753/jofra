@@ -384,7 +384,7 @@ export const TikTokSection = memo(function TikTokSection() {
 
         <div data-tiktok-cta className={styles.cta}>
           <a
-            href="https://www.tiktok.com/@jofra.soundbreath"
+            href="https://www.tiktok.com/@sercrealidad"
             target="_blank"
             rel="noopener noreferrer"
             className={styles.tiktokBtn}

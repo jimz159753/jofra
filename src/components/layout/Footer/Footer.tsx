@@ -45,10 +45,10 @@ export const Footer = memo(function Footer() {
   ]
 
   const socials: { href: string; label: string; icon: React.ReactNode }[] = [
-    { href: 'https://instagram.com', label: 'Instagram', icon: <IcoInstagram /> },
-    { href: 'https://facebook.com',  label: 'Facebook',  icon: <IcoFacebook /> },
-    { href: 'https://youtube.com',   label: 'YouTube',   icon: <IcoYouTube /> },
-    { href: 'https://www.tiktok.com/@jofra.soundbreath', label: 'TikTok', icon: <IcoTikTok /> },
+    { href: 'https://www.instagram.com/sercrealidad/', label: 'Instagram', icon: <IcoInstagram /> },
+    { href: 'https://www.facebook.com/SERCREALIDAD', label: 'Facebook', icon: <IcoFacebook /> },
+    { href: 'https://www.youtube.com/@ser-crealidad5314', label: 'YouTube', icon: <IcoYouTube /> },
+    { href: 'https://www.tiktok.com/@sercrealidad', label: 'TikTok', icon: <IcoTikTok /> },
   ]
 
   return (

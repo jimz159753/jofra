@@ -8,7 +8,7 @@ import styles from './ServicesSection.module.css'
 
 gsap.registerPlugin(ScrollTrigger)
 
-const WA_LINK = 'https://wa.me/1234567890'
+const WA_LINK = 'https://wa.me/523310707648'
 
 /* ── Service icons ───────────────────────────────── */
 const IcoSound = () => (

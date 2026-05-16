@@ -5,7 +5,7 @@ import { useScrollProgress } from '@hooks/useScrollProgress'
 import { useLanguage } from '@context/LanguageContext'
 import styles from './Navbar.module.css'
 
-const WA_LINK = 'https://wa.me/1234567890'
+const WA_LINK = 'https://wa.me/523310707648'
 
 const SECTION_IDS = ['home', 'about', 'services', 'experience', 'faq'] as const
 type SectionId = (typeof SECTION_IDS)[number]

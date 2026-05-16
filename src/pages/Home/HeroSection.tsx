@@ -83,7 +83,7 @@ export const HeroSection = memo(function HeroSection() {
     return () => ctx.revert()
   }, [])
 
-  const WA_LINK = 'https://wa.me/1234567890'
+  const WA_LINK = 'https://wa.me/523310707648'
   const scrollTo = (id: string) => document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' })
 
   return (
