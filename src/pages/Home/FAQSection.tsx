@@ -60,8 +60,11 @@ export const FAQSection = memo(function FAQSection() {
                   aria-controls={`faq-${key}`}
                 >
                   <span>{t(`faq.${key}`)}</span>
-                  <span className={styles.icon} aria-hidden="true">
-                    {isOpen ? '−' : '+'}
+                  <span className={[styles.icon, isOpen ? styles.iconOpen : ''].filter(Boolean).join(' ')} aria-hidden="true">
+                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
+                      <line x1="6" y1="0" x2="6" y2="12" className={styles.iconV} />
+                      <line x1="0" y1="6" x2="12" y2="6" />
+                    </svg>
                   </span>
                 </button>
               </dt>

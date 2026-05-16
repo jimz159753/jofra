@@ -1,4 +1,5 @@
 import { useRef, useState, useCallback, useEffect, memo } from 'react'
+import { createPortal } from 'react-dom'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import bornoutVideo from '@assets/videos/bornout.mp4'
@@ -46,14 +47,6 @@ const IcoSpeakerOn = () => (
   </svg>
 )
 
-const IcoPlayCircle = () => (
-  <svg width="56" height="56" viewBox="0 0 56 56" fill="none" aria-hidden="true">
-    <circle cx="28" cy="28" r="28" fill="rgba(0,0,0,0.45)"/>
-    <path d="M22 18l18 10-18 10V18z" fill="white"/>
-  </svg>
-)
-
-/* ── Action bar icons ────────────────────────────────── */
 const IcoHeart = ({ filled }: { filled?: boolean }) => (
   <svg width="28" height="28" viewBox="0 0 24 24" fill={filled ? '#fe2c55' : 'white'} aria-hidden="true">
     <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
@@ -78,6 +71,73 @@ const IcoMusicNote = () => (
   </svg>
 )
 
+const IcoExpand = () => (
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="white" aria-hidden="true">
+    <path d="M7 14H5v5h5v-2H7v-3zm-2-4h2V7h3V5H5v5zm12 7h-3v2h5v-5h-2v3zM14 5v2h3v3h2V5h-5z"/>
+  </svg>
+)
+
+const IcoClose = () => (
+  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+    <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/>
+  </svg>
+)
+
+/* ── Video modal ─────────────────────────────────────── */
+interface VideoModalProps {
+  src: string
+  caption: string
+  onClose: () => void
+}
+
+const VideoModal = memo(function VideoModal({ src, caption, onClose }: VideoModalProps) {
+  const videoRef = useRef<HTMLVideoElement>(null)
+  const overlayRef = useRef<HTMLDivElement>(null)
+  const wrapRef = useRef<HTMLDivElement>(null)
+
+  useEffect(() => {
+    const v = videoRef.current
+    if (!v) return
+    v.currentTime = 0
+    v.muted = false
+    v.play().catch(() => { v.muted = true; v.play() })
+  }, [src])
+
+  useEffect(() => {
+    const onKey = (e: KeyboardEvent) => e.key === 'Escape' && onClose()
+    document.addEventListener('keydown', onKey)
+    document.body.style.overflow = 'hidden'
+
+    const tl = gsap.timeline()
+    tl.fromTo(overlayRef.current, { opacity: 0 }, { opacity: 1, duration: 0.25, ease: 'power2.out' })
+      .fromTo(wrapRef.current, { scale: 0.88, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.35, ease: 'back.out(1.5)' }, '<0.05')
+
+    return () => {
+      document.removeEventListener('keydown', onKey)
+      document.body.style.overflow = ''
+    }
+  }, [onClose])
+
+  return createPortal(
+    <div ref={overlayRef} className={styles.modalOverlay} onClick={onClose} role="dialog" aria-modal="true" aria-label={caption}>
+      <button className={styles.modalClose} onClick={onClose} aria-label="Cerrar video">
+        <IcoClose />
+      </button>
+      <div ref={wrapRef} className={styles.modalVideoWrap} onClick={(e) => e.stopPropagation()}>
+        <video
+          ref={videoRef}
+          src={src}
+          className={styles.modalVideo}
+          controls
+          playsInline
+          loop
+        />
+      </div>
+    </div>,
+    document.body
+  )
+})
+
 /* ── Card ────────────────────────────────────────────── */
 interface TikTokCardProps {
   src: string
@@ -90,6 +150,7 @@ interface TikTokCardProps {
   comments: string
   shares: string
   delay?: number
+  onExpand: () => void
 }
 
 const TikTokCard = memo(function TikTokCard({
@@ -102,19 +163,11 @@ const TikTokCard = memo(function TikTokCard({
   likes,
   comments,
   shares,
-  delay = 0,
+  onExpand,
 }: TikTokCardProps) {
   const videoRef = useRef<HTMLVideoElement>(null)
-  const [playing, setPlaying] = useState(false)
   const [muted, setMuted] = useState(true)
   const [liked, setLiked] = useState(false)
-
-  const togglePlay = useCallback(() => {
-    const v = videoRef.current
-    if (!v) return
-    if (v.paused) { v.play(); setPlaying(true) }
-    else { v.pause(); setPlaying(false) }
-  }, [])
 
   const toggleMute = useCallback((e: React.MouseEvent) => {
     e.stopPropagation()
@@ -130,23 +183,17 @@ const TikTokCard = memo(function TikTokCard({
   }, [])
 
   return (
-    <div className={[styles.cardWrapper, delay > 0 ? styles.cardWrapperRight : styles.cardWrapperLeft].join(' ')}>
-      {/* Phone frame — Dynamic Island design */}
-      <div className={styles.phone}>
-
-        {/* Screen fills the phone; Dynamic Island is inside */}
+    <div className={styles.phone}>
         <div
           className={styles.screen}
-          onClick={togglePlay}
+          onClick={onExpand}
           role="button"
-          aria-label={playing ? 'Pausar video' : 'Reproducir video'}
+          aria-label="Ver video completo con sonido"
           tabIndex={0}
-          onKeyDown={(e) => e.key === 'Enter' && togglePlay()}
+          onKeyDown={(e) => e.key === 'Enter' && onExpand()}
         >
-          {/* Dynamic Island pill */}
           <div className={styles.dynamicIsland} aria-hidden="true" />
 
-          {/* Video */}
           <video
             ref={videoRef}
             className={styles.video}
@@ -157,11 +204,9 @@ const TikTokCard = memo(function TikTokCard({
             autoPlay
           />
 
-          {/* Gradient overlays */}
           <div className={styles.gradTop} aria-hidden="true" />
           <div className={styles.gradBottom} aria-hidden="true" />
 
-          {/* Status bar — time left, icons right, Island floats center */}
           <div className={styles.statusBar} aria-hidden="true">
             <span className={styles.time}>9:41</span>
             <div className={styles.statusIcons}>
@@ -171,7 +216,6 @@ const TikTokCard = memo(function TikTokCard({
             </div>
           </div>
 
-          {/* Top nav (Para ti / Siguiendo) + mute */}
           <div className={styles.topBar}>
             <span className={styles.topLabel}>Para ti</span>
             <span className={styles.topActive}>Siguiendo</span>
@@ -184,14 +228,12 @@ const TikTokCard = memo(function TikTokCard({
             </button>
           </div>
 
-          {/* Play overlay */}
-          {!playing && (
-            <div className={styles.playOverlay} aria-hidden="true">
-              <IcoPlayCircle />
-            </div>
-          )}
+          {/* Expand hint */}
+          <div className={styles.expandHint} aria-hidden="true">
+            <IcoExpand />
+            <span>Ver con sonido</span>
+          </div>
 
-          {/* Right action buttons */}
           <div className={styles.actions}>
             <div className={styles.avatar} aria-hidden="true">
               <span>{username.charAt(0).toUpperCase()}</span>
@@ -212,12 +254,12 @@ const TikTokCard = memo(function TikTokCard({
               </span>
             </button>
 
-            <button className={styles.actionBtn} aria-label="Comentarios">
+            <button className={styles.actionBtn} aria-label="Comentarios" onClick={(e) => e.stopPropagation()}>
               <IcoCommentBubble />
               <span className={styles.actionCount}>{comments}</span>
             </button>
 
-            <button className={styles.actionBtn} aria-label="Compartir">
+            <button className={styles.actionBtn} aria-label="Compartir" onClick={(e) => e.stopPropagation()}>
               <IcoArrowShare />
               <span className={styles.actionCount}>{shares}</span>
             </button>
@@ -227,7 +269,6 @@ const TikTokCard = memo(function TikTokCard({
             </div>
           </div>
 
-          {/* Bottom info */}
           <div className={styles.bottomInfo}>
             <p className={styles.cardUsername}>@{handle}</p>
             <p className={styles.caption}>{caption}</p>
@@ -242,18 +283,42 @@ const TikTokCard = memo(function TikTokCard({
             </div>
           </div>
 
-          {/* Home indicator */}
           <div className={styles.homeBar} aria-hidden="true" />
         </div>
       </div>
-    </div>
   )
 })
 
 /* ── Section ─────────────────────────────────────────── */
+const VIDEOS = [
+  {
+    src: bornoutVideo,
+    username: 'Jofra',
+    handle: 'jofra.soundbreath',
+    caption: '¿Tu cuerpo te habla de burnout? Así es como el sonido lo sana 🎵',
+    tags: ['burnout', 'soundhealing', 'bienestar', 'terapia'],
+    song: 'Tibetan Singing Bowl — Sound Bath Mix',
+    likes: '24.2K',
+    comments: '843',
+    shares: '1.1K',
+  },
+  {
+    src: entrepreneurVideo,
+    username: 'Jofra',
+    handle: 'jofra.soundbreath',
+    caption: 'Para emprendedores que nunca descansan 🌬️ 3 respiraciones que cambian tu estado',
+    tags: ['entrepreneur', 'breathwork', 'mindset', 'productividad'],
+    song: 'Ocean Waves Frequency — 432Hz',
+    likes: '18.7K',
+    comments: '612',
+    shares: '987',
+  },
+]
+
 export const TikTokSection = memo(function TikTokSection() {
   const sectionRef = useRef<HTMLElement>(null)
   const phonesRef = useRef<HTMLDivElement>(null)
+  const [activeVideo, setActiveVideo] = useState<typeof VIDEOS[number] | null>(null)
 
   useEffect(() => {
     const ctx = gsap.context(() => {
@@ -289,6 +354,14 @@ export const TikTokSection = memo(function TikTokSection() {
       <div className={styles.glow1} aria-hidden="true" />
       <div className={styles.glow2} aria-hidden="true" />
 
+      {activeVideo && (
+        <VideoModal
+          src={activeVideo.src}
+          caption={activeVideo.caption}
+          onClose={() => setActiveVideo(null)}
+        />
+      )}
+
       <div className={styles.container}>
         <div data-tiktok-header className={styles.header}>
           <span className={styles.eyebrow}>✦ Sígueme en TikTok</span>
@@ -302,34 +375,11 @@ export const TikTokSection = memo(function TikTokSection() {
         </div>
 
         <div className={styles.phones} ref={phonesRef}>
-          <div data-tiktok-card>
-            <TikTokCard
-              src={bornoutVideo}
-              username="Jofra"
-              handle="jofra.soundbreath"
-              caption="¿Tu cuerpo te habla de burnout? Así es como el sonido lo sana 🎵"
-              tags={['burnout', 'soundhealing', 'bienestar', 'terapia']}
-              song="Tibetan Singing Bowl — Sound Bath Mix"
-              likes="24.2K"
-              comments="843"
-              shares="1.1K"
-              delay={0}
-            />
-          </div>
-          <div data-tiktok-card>
-            <TikTokCard
-              src={entrepreneurVideo}
-              username="Jofra"
-              handle="jofra.soundbreath"
-              caption="Para emprendedores que nunca descansan 🌬️ 3 respiraciones que cambian tu estado"
-              tags={['entrepreneur', 'breathwork', 'mindset', 'productividad']}
-              song="Ocean Waves Frequency — 432Hz"
-              likes="18.7K"
-              comments="612"
-              shares="987"
-              delay={0.15}
-            />
-          </div>
+          {VIDEOS.map((v, i) => (
+            <div key={v.src} data-tiktok-card className={i === 0 ? styles.cardWrapperLeft : styles.cardWrapperRight}>
+              <TikTokCard {...v} delay={i * 0.15} onExpand={() => setActiveVideo(v)} />
+            </div>
+          ))}
         </div>
 
         <div data-tiktok-cta className={styles.cta}>

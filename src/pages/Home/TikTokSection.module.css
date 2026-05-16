@@ -109,9 +109,22 @@
   transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.cardWrapperLeft  { transform: rotate(-2deg); }
-.cardWrapperRight { transform: rotate(2deg); }
-.cardWrapper:hover { transform: scale(1.03) rotate(0deg); }
+.cardWrapperLeft {
+  flex-shrink: 0;
+  will-change: transform;
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  transform: rotate(-2deg);
+}
+
+.cardWrapperRight {
+  flex-shrink: 0;
+  will-change: transform;
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  transform: rotate(2deg);
+}
+
+.cardWrapperLeft:hover,
+.cardWrapperRight:hover { transform: scale(1.03) rotate(0deg); }
 
 .phone {
   width: 280px;
@@ -505,6 +518,7 @@
 .cta {
   display: flex;
   justify-content: center;
+  margin-top: var(--space-10);
 }
 
 .tiktokBtn {
@@ -543,6 +557,95 @@
 .tiktokBtn:hover::before { opacity: 1; }
 
 /* ═══════════════════════════════════════════════
+   EXPAND HINT
+═══════════════════════════════════════════════ */
+.expandHint {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  z-index: 4;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.2s;
+  background: rgba(0, 0, 0, 0.55);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 12px;
+  padding: 10px 16px;
+  backdrop-filter: blur(4px);
+}
+
+.expandHint span {
+  font-family: var(--font-body);
+  font-size: 11px;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.95);
+  white-space: nowrap;
+  letter-spacing: 0.04em;
+}
+
+.screen:hover .expandHint { opacity: 1; }
+
+/* Always show on touch devices */
+@media (hover: none) {
+  .expandHint { opacity: 1; }
+}
+
+/* ═══════════════════════════════════════════════
+   VIDEO MODAL
+═══════════════════════════════════════════════ */
+.modalOverlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.92);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  padding: var(--space-4);
+}
+
+.modalClose {
+  position: fixed;
+  top: var(--space-4);
+  right: var(--space-4);
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 10000;
+  transition: background var(--transition-fast);
+}
+.modalClose:hover { background: rgba(255, 255, 255, 0.22); }
+
+.modalVideoWrap {
+  position: relative;
+  height: min(85vh, 90vw * 16 / 9);
+  max-height: 85vh;
+  aspect-ratio: 9 / 16;
+  border-radius: 20px;
+  overflow: hidden;
+  background: #000;
+  box-shadow: 0 32px 80px rgba(0, 0, 0, 0.9);
+}
+
+.modalVideo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ═══════════════════════════════════════════════
    RESPONSIVE
 ═══════════════════════════════════════════════ */
 @media (max-width: 640px) {
@@ -553,4 +656,9 @@
   }
 
   .phone { width: 260px; }
+
+  .modalVideoWrap {
+    height: 80vh;
+    border-radius: 16px;
+  }
 }

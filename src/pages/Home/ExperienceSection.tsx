@@ -1,4 +1,4 @@
-import { memo, useRef, useCallback, useEffect } from 'react'
+import { memo, useRef, useEffect, useState } from 'react'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { useTranslation } from 'react-i18next'
@@ -171,42 +171,18 @@ const WhatsAppChat = memo(function WhatsAppChat({ convo }: { convo: Conversation
 const doubled = [...CONVERSATIONS, ...CONVERSATIONS]
 
 const Carousel = memo(function Carousel() {
-  const trackRef = useRef<HTMLDivElement>(null)
-  const tlRef = useRef<gsap.core.Tween | null>(null)
-
-  const pause  = useCallback(() => tlRef.current?.pause(), [])
-  const resume = useCallback(() => tlRef.current?.resume(), [])
-
-  useEffect(() => {
-    const track = trackRef.current
-    if (!track) return
-
-    /* Measure after paint so scrollWidth is accurate */
-    const raf = requestAnimationFrame(() => {
-      const halfWidth = track.scrollWidth / 2
-
-      tlRef.current = gsap.to(track, {
-        x: -halfWidth,
-        duration: 28,
-        ease: 'none',
-        repeat: -1,
-      })
-    })
-
-    return () => {
-      cancelAnimationFrame(raf)
-      tlRef.current?.kill()
-    }
-  }, [])
+  const [paused, setPaused] = useState(false)
 
   return (
     <div
       className={styles.carouselWrapper}
-      onMouseEnter={pause}
-      onMouseLeave={resume}
+      onMouseEnter={() => setPaused(true)}
+      onMouseLeave={() => setPaused(false)}
+      onTouchStart={() => setPaused(true)}
+      onTouchEnd={() => setPaused(false)}
     >
       <div className={styles.carouselViewport}>
-        <div className={styles.carouselTrack} ref={trackRef}>
+        <div className={[styles.carouselTrack, paused ? styles.carouselTrackPaused : ''].filter(Boolean).join(' ')}>
           {doubled.map((convo, i) => (
             <div key={`${convo.name}-${i}`} className={styles.carouselSlide}>
               <WhatsAppChat convo={convo} />

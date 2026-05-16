@@ -68,9 +68,18 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: var(--text-lg);
   color: var(--color-teal-mid);
   transition: background var(--transition-base), color var(--transition-base);
+}
+
+.iconV {
+  transform-origin: 6px 6px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.iconOpen .iconV {
+  transform: scaleY(0);
+  opacity: 0;
 }
 
 .itemOpen .icon {
