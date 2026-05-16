@@ -173,6 +173,15 @@
   .imageCol { order: -1; }
   .image { width: 280px; height: 340px; }
   .imageWrapper { width: 280px; }
+  .textCol { align-items: center; text-align: center; }
+  .quote {
+    border-left: none;
+    border-top: 3px solid var(--color-sand);
+    padding-left: 0;
+    padding-top: var(--space-4);
+  }
+  .certs { align-self: stretch; }
+  .cert { text-align: left; }
   .stats {
     flex-direction: column;
     gap: var(--space-8);

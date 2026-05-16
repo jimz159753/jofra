@@ -97,49 +97,42 @@
 }
 
 /* ══════════════════════════════════════════════
-   CAROUSEL
+   CAROUSEL — infinite marquee
 ══════════════════════════════════════════════ */
 .carouselWrapper {
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-8);
+  width: 100%;
+  overflow: hidden;
 }
 
 .carouselViewport {
   overflow: hidden;
-  cursor: grab;
   user-select: none;
   mask-image: linear-gradient(
     to right,
     transparent 0%,
-    black 12%,
-    black 88%,
+    black 10%,
+    black 90%,
     transparent 100%
   );
   -webkit-mask-image: linear-gradient(
     to right,
     transparent 0%,
-    black 12%,
-    black 88%,
+    black 10%,
+    black 90%,
     transparent 100%
   );
 }
 
-.carouselViewport:active { cursor: grabbing; }
-
 .carouselTrack {
   display: flex;
   gap: var(--space-6);
-  padding: var(--space-4) var(--space-2);
+  padding: var(--space-4) 0;
+  width: max-content;
+  will-change: transform;
 }
 
 .carouselSlide {
   flex: 0 0 340px;
-  transition: transform var(--transition-base), opacity var(--transition-base);
-}
-
-.slideActive {
-  transform: scale(1.02);
 }
 
 
@@ -450,5 +443,5 @@
 
 @media (max-width: 640px) {
   .timeline { grid-template-columns: 1fr; }
-  .carouselSlide { flex: 0 0 85vw; }
+  .carouselSlide { flex: 0 0 270px; }
 }

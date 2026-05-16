@@ -1,4 +1,4 @@
-import { memo, useRef, useState, useCallback, useEffect } from 'react'
+import { memo, useRef, useCallback, useEffect } from 'react'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { useTranslation } from 'react-i18next'
@@ -167,67 +167,48 @@ const WhatsAppChat = memo(function WhatsAppChat({ convo }: { convo: Conversation
   )
 })
 
-/* ── Carousel (auto-play, drag, edge fade, no controls) ─ */
+/* ── Infinite marquee carousel ───────────────────────── */
+const doubled = [...CONVERSATIONS, ...CONVERSATIONS]
+
 const Carousel = memo(function Carousel() {
   const trackRef = useRef<HTMLDivElement>(null)
-  const [current, setCurrent] = useState(0)
-  const [isHovered, setIsHovered] = useState(false)
-  const total = CONVERSATIONS.length
+  const tlRef = useRef<gsap.core.Tween | null>(null)
 
-  const scrollToIdx = useCallback((idx: number) => {
+  const pause  = useCallback(() => tlRef.current?.pause(), [])
+  const resume = useCallback(() => tlRef.current?.resume(), [])
+
+  useEffect(() => {
     const track = trackRef.current
     if (!track) return
-    const card = track.children[idx] as HTMLElement
-    if (card) {
-      const offset = card.offsetLeft - (track.parentElement!.clientWidth - card.offsetWidth) / 2
-      track.parentElement!.scrollTo({ left: Math.max(0, offset), behavior: 'smooth' })
+
+    /* Measure after paint so scrollWidth is accurate */
+    const raf = requestAnimationFrame(() => {
+      const halfWidth = track.scrollWidth / 2
+
+      tlRef.current = gsap.to(track, {
+        x: -halfWidth,
+        duration: 28,
+        ease: 'none',
+        repeat: -1,
+      })
+    })
+
+    return () => {
+      cancelAnimationFrame(raf)
+      tlRef.current?.kill()
     }
   }, [])
-
-  const goTo = useCallback((idx: number) => {
-    const clamped = Math.max(0, Math.min(idx, total - 1))
-    setCurrent(clamped)
-    scrollToIdx(clamped)
-  }, [total, scrollToIdx])
-
-  /* Auto-play every 4 s, pause on hover */
-  useEffect(() => {
-    if (isHovered) return
-    const id = setInterval(() => {
-      setCurrent((prev) => {
-        const next = (prev + 1) % total
-        scrollToIdx(next)
-        return next
-      })
-    }, 4000)
-    return () => clearInterval(id)
-  }, [isHovered, total, scrollToIdx])
-
-  /* Drag to scroll */
-  const dragStart = useRef(0)
-  const onPointerDown = (e: React.PointerEvent) => { dragStart.current = e.clientX }
-  const onPointerUp = (e: React.PointerEvent) => {
-    const delta = dragStart.current - e.clientX
-    if (Math.abs(delta) > 40) goTo(delta > 0 ? current + 1 : current - 1)
-  }
 
   return (
     <div
       className={styles.carouselWrapper}
-      onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)}
+      onMouseEnter={pause}
+      onMouseLeave={resume}
     >
-      <div
-        className={styles.carouselViewport}
-        onPointerDown={onPointerDown}
-        onPointerUp={onPointerUp}
-      >
+      <div className={styles.carouselViewport}>
         <div className={styles.carouselTrack} ref={trackRef}>
-          {CONVERSATIONS.map((convo, i) => (
-            <div
-              key={convo.name}
-              className={[styles.carouselSlide, i === current ? styles.slideActive : ''].filter(Boolean).join(' ')}
-            >
+          {doubled.map((convo, i) => (
+            <div key={`${convo.name}-${i}`} className={styles.carouselSlide}>
               <WhatsAppChat convo={convo} />
             </div>
           ))}

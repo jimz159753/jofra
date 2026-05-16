@@ -7,7 +7,7 @@ import styles from './Navbar.module.css'
 
 const WA_LINK = 'https://wa.me/1234567890'
 
-const SECTION_IDS = ['home', 'about', 'services'] as const
+const SECTION_IDS = ['home', 'about', 'services', 'experience', 'faq'] as const
 type SectionId = (typeof SECTION_IDS)[number]
 
 function scrollToSection(id: SectionId) {
@@ -17,7 +17,7 @@ function scrollToSection(id: SectionId) {
 
 export const Navbar = memo(function Navbar() {
   const { t } = useTranslation()
-  const { scrollY, direction } = useScrollProgress()
+  const { scrollY } = useScrollProgress()
   const { language, toggleLanguage } = useLanguage()
   const [menuOpen, setMenuOpen] = useState(false)
   const [activeSection, setActiveSection] = useState<SectionId>('home')
@@ -26,12 +26,6 @@ export const Navbar = memo(function Navbar() {
   const backdropRef = useRef<HTMLDivElement>(null)
 
   const isScrolled = scrollY > 60
-  const isHidden = direction === 'down' && scrollY > 300
-
-  /* Navbar slide-up/down */
-  useEffect(() => {
-    gsap.to(headerRef.current, { y: isHidden ? -100 : 0, duration: 0.3, ease: 'power2.inOut' })
-  }, [isHidden])
 
   /* Mobile menu GSAP slide */
   useEffect(() => {
@@ -62,11 +56,11 @@ export const Navbar = memo(function Navbar() {
   useEffect(() => {
     const onScroll = () => {
       const navH = parseInt(getComputedStyle(document.documentElement).getPropertyValue('--nav-height') || '80')
-      const scrollTop = window.scrollY + navH + 40
+      const threshold = navH + 40
       let current: SectionId = 'home'
       for (const id of SECTION_IDS) {
         const el = document.getElementById(id)
-        if (el && el.offsetTop <= scrollTop) current = id
+        if (el && el.getBoundingClientRect().top <= threshold) current = id
       }
       setActiveSection(current)
     }
@@ -83,25 +77,27 @@ export const Navbar = memo(function Navbar() {
   const close = useCallback(() => setMenuOpen(false), [])
 
   const links: { sectionId: SectionId; label: string }[] = [
-    { sectionId: 'home',     label: t('nav.home') },
-    { sectionId: 'about',    label: t('nav.about') },
-    { sectionId: 'services', label: t('nav.services') },
+    { sectionId: 'home',       label: t('nav.home') },
+    { sectionId: 'about',      label: t('nav.about') },
+    { sectionId: 'services',   label: t('nav.services') },
+    { sectionId: 'experience', label: t('nav.experience') },
+    { sectionId: 'faq',        label: t('nav.faq') },
   ]
 
   return (
     <>
       <header
         ref={headerRef}
-        className={[styles.navbar, isScrolled ? styles.scrolled : '', isHidden ? styles.hidden : ''].filter(Boolean).join(' ')}
+        className={[styles.navbar, isScrolled ? styles.scrolled : ''].filter(Boolean).join(' ')}
         role="banner"
       >
         <div className={styles.inner}>
           <button
             className={styles.logoBtn}
             onClick={() => scrollToSection('home')}
-            aria-label="Jofra — Ir al inicio"
+            aria-label="Crealidad — Ir al inicio"
           >
-            <span className={styles.logoText}>Jofra</span>
+            <span className={styles.logoText}>Crealidad</span>
             <span className={styles.logoSub}>Sound Breath</span>
           </button>
 

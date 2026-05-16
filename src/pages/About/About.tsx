@@ -7,7 +7,7 @@ export default function About() {
   const { t } = useTranslation()
 
   useEffect(() => {
-    document.title = `${t('nav.about')} | Jofra Sound Breath`
+    document.title = `${t('nav.about')} | Crealidad`
   }, [t])
 
   return (

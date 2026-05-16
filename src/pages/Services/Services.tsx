@@ -6,7 +6,7 @@ export default function Services() {
   const { t } = useTranslation()
 
   useEffect(() => {
-    document.title = `${t('nav.services')} | Jofra Sound Breath`
+    document.title = `${t('nav.services')} | Crealidad`
   }, [t])
 
   return (

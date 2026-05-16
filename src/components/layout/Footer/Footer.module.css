@@ -12,7 +12,7 @@
 
 .grid {
   display: grid;
-  grid-template-columns: 2fr 1fr 1fr 2fr;
+  grid-template-columns: 2fr 1fr 1fr;
   gap: var(--space-12);
   margin-bottom: var(--space-16);
 }
@@ -161,10 +161,19 @@
     grid-template-columns: 1fr 1fr;
     gap: var(--space-10);
   }
-  .brand { grid-column: 1 / -1; }
+  .brand { grid-column: 1 / -1; text-align: center; }
+  .quote {
+    border-left: none;
+    padding-left: 0;
+    border-top: 2px solid var(--color-sand);
+    padding-top: var(--space-3);
+    display: inline-block;
+  }
 }
 
 @media (max-width: 480px) {
   .grid { grid-template-columns: 1fr; }
-  .form { flex-direction: column; }
+  .links { align-items: center; text-align: center; }
+  .social { text-align: center; }
+  .socialLinks { align-items: center; }
 }

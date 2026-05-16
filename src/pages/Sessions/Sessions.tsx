@@ -6,7 +6,7 @@ export default function Sessions() {
   const { t } = useTranslation()
 
   useEffect(() => {
-    document.title = `${t('nav.sessions')} | Jofra Sound Breath`
+    document.title = `${t('nav.sessions')} | Crealidad`
   }, [t])
 
   return (

@@ -3,6 +3,8 @@
     "home": "Inicio",
     "about": "Sobre Jofra",
     "services": "Terapias",
+    "experience": "La Experiencia",
+    "faq": "Preguntas",
     "sessions": "Sesiones",
     "contact": "Contacto",
     "bookSession": "Agenda tu sesión"
@@ -159,6 +161,6 @@
       "button": "Suscribirme",
       "success": "¡Bienvenido/a a la comunidad!"
     },
-    "copyright": "© 2024 Jofra Sound Breath. Todos los derechos reservados."
+    "copyright": "© 2024 Crealidad. Todos los derechos reservados."
   }
 }

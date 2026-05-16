@@ -8,7 +8,7 @@ export default function Contact() {
   const { t } = useTranslation()
 
   useEffect(() => {
-    document.title = `${t('nav.contact')} | Jofra Sound Breath`
+    document.title = `${t('nav.contact')} | Crealidad`
   }, [t])
 
   return (

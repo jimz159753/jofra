@@ -340,15 +340,16 @@
    RESPONSIVE
 ══════════════════════════════════════════════ */
 @media (max-width: 768px) {
+  .inner {
+    padding: 0 var(--space-5);
+    gap: var(--space-3);
+  }
   .desktopNav { display: none; }
   .menuToggle { display: flex; }
-
-  /* Ocultar el botón CTA en móvil, dejar lang + hamburger */
-  .actions > *:not(.menuToggle):not(.langToggle) {
-    display: none;
-  }
+  .ctaLink { display: none; }
 }
 
 @media (max-width: 480px) {
+  .inner { padding: 0 var(--space-4); }
   .langToggle { display: none; }
 }

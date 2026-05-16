@@ -11,6 +11,7 @@ export const HeroSection = memo(function HeroSection() {
   const { t } = useTranslation()
   const canvasRef = useRef<HTMLCanvasElement>(null)
   const contentRef = useRef<HTMLDivElement>(null)
+  const sectionRef = useRef<HTMLElement>(null)
 
   /* Floating particles reacting to mouse */
   useEffect(() => {
@@ -78,7 +79,7 @@ export const HeroSection = memo(function HeroSection() {
         duration: 0.8,
         ease: 'power2.out',
       }, '+=0.6')
-    }, contentRef)
+    }, sectionRef)
     return () => ctx.revert()
   }, [])
 
@@ -86,7 +87,7 @@ export const HeroSection = memo(function HeroSection() {
   const scrollTo = (id: string) => document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' })
 
   return (
-    <section id="home" className={styles.hero} aria-label="Hero — Jofra Sound Breath Therapist">
+    <section id="home" ref={sectionRef} className={styles.hero} aria-label="Hero — Crealidad">
       <video
         className={styles.videoBg}
         src={therapyVideo}
@@ -101,7 +102,7 @@ export const HeroSection = memo(function HeroSection() {
       <div className={styles.content} ref={contentRef}>
         <span data-hero-item className={styles.eyebrow}>{t('hero.tagline')}</span>
 
-        <h1 data-hero-item className={styles.title}>Jofra</h1>
+        <h1 data-hero-item className={styles.title}>Crealidad</h1>
 
         <p data-hero-item className={styles.subtitle}>{t('hero.subtitle')}</p>
 
