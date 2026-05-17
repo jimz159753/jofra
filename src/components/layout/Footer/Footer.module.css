@@ -159,6 +159,7 @@
     gap: var(--space-10);
   }
   .brand { grid-column: 1 / -1; text-align: center; }
+  .brand .logo { margin: 0 auto; }
   .quote {
     border-left: none;
     padding-left: 0;
