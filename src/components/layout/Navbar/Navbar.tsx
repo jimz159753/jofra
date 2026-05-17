@@ -3,6 +3,7 @@ import { gsap } from 'gsap'
 import { useTranslation } from 'react-i18next'
 import { useScrollProgress } from '@hooks/useScrollProgress'
 import { useLanguage } from '@context/LanguageContext'
+import logoImg from '@assets/images/crealidad.png'
 import styles from './Navbar.module.css'
 
 const WA_LINK = 'https://wa.me/523310707648'
@@ -97,7 +98,11 @@ export const Navbar = memo(function Navbar() {
             onClick={() => scrollToSection('home')}
             aria-label="Crealidad — Ir al inicio"
           >
-            <span className={styles.logoText}>Crealidad</span>
+            <img
+              src={logoImg}
+              alt="Crealidad"
+              className={[styles.logoImg, isScrolled ? styles.logoImgScrolled : ''].filter(Boolean).join(' ')}
+            />
             <span className={styles.logoSub}>Sound Breath</span>
           </button>
 

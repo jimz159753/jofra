@@ -123,22 +123,12 @@
   );
 }
 
-@keyframes marqueeScroll {
-  from { transform: translateX(0); }
-  to   { transform: translateX(calc(-50% - var(--space-6) / 2)); }
-}
-
 .carouselTrack {
   display: flex;
   gap: var(--space-6);
   padding: var(--space-4) 0;
   width: max-content;
   will-change: transform;
-  animation: marqueeScroll 32s linear infinite;
-}
-
-.carouselTrackPaused {
-  animation-play-state: paused;
 }
 
 .carouselSlide {

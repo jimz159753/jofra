@@ -1,5 +1,6 @@
 import { memo } from 'react'
 import { useTranslation } from 'react-i18next'
+import logoImg from '@assets/images/crealidad.png'
 import styles from './Footer.module.css'
 
 function scrollTo(id: string) {
@@ -56,7 +57,7 @@ export const Footer = memo(function Footer() {
       <div className={styles.container}>
         <div className={styles.grid}>
           <div className={styles.brand}>
-            <span className={styles.logo}>Crealidad</span>
+            <img src={logoImg} alt="Crealidad" className={styles.logo} />
             <p className={styles.tagline}>{t('footer.tagline')}</p>
             <blockquote className={styles.quote}>{t('footer.quote')}</blockquote>
           </div>

@@ -1,4 +1,4 @@
-import { memo, useRef, useEffect, useState } from 'react'
+import { memo, useRef, useEffect, useCallback, useState } from 'react'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { useTranslation } from 'react-i18next'
@@ -171,18 +171,63 @@ const WhatsAppChat = memo(function WhatsAppChat({ convo }: { convo: Conversation
 const doubled = [...CONVERSATIONS, ...CONVERSATIONS]
 
 const Carousel = memo(function Carousel() {
+  const trackRef = useRef<HTMLDivElement>(null)
+  const tweenRef = useRef<gsap.core.Tween | null>(null)
   const [paused, setPaused] = useState(false)
+
+  useEffect(() => {
+    const track = trackRef.current
+    if (!track) return
+
+    let killed = false
+
+    const raf = requestAnimationFrame(() => {
+      if (killed) return
+
+      /* offsetLeft of the 7th slide (index 6) is the exact pixel where
+         the duplicate set starts — the precise seamless loop point */
+      const firstDup = track.children[CONVERSATIONS.length] as HTMLElement | undefined
+      if (!firstDup) return
+      const loopPoint = firstDup.offsetLeft
+
+      function animate() {
+        if (killed) return
+        gsap.set(track, { x: 0 })
+        tweenRef.current = gsap.to(track, {
+          x: -loopPoint,
+          duration: 30,
+          ease: 'none',
+          onComplete: animate,
+        })
+      }
+      animate()
+    })
+
+    return () => {
+      killed = true
+      cancelAnimationFrame(raf)
+      tweenRef.current?.kill()
+    }
+  }, [])
+
+  useEffect(() => {
+    if (paused) tweenRef.current?.pause()
+    else tweenRef.current?.resume()
+  }, [paused])
+
+  const handlePause  = useCallback(() => setPaused(true), [])
+  const handleResume = useCallback(() => setPaused(false), [])
 
   return (
     <div
       className={styles.carouselWrapper}
-      onMouseEnter={() => setPaused(true)}
-      onMouseLeave={() => setPaused(false)}
-      onTouchStart={() => setPaused(true)}
-      onTouchEnd={() => setPaused(false)}
+      onMouseEnter={handlePause}
+      onMouseLeave={handleResume}
+      onTouchStart={handlePause}
+      onTouchEnd={handleResume}
     >
       <div className={styles.carouselViewport}>
-        <div className={[styles.carouselTrack, paused ? styles.carouselTrackPaused : ''].filter(Boolean).join(' ')}>
+        <div className={styles.carouselTrack} ref={trackRef}>
           {doubled.map((convo, i) => (
             <div key={`${convo.name}-${i}`} className={styles.carouselSlide}>
               <WhatsAppChat convo={convo} />
