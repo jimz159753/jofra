@@ -89,7 +89,7 @@ export const Navbar = memo(function Navbar() {
     <>
       <header
         ref={headerRef}
-        className={[styles.navbar, isScrolled ? styles.scrolled : ''].filter(Boolean).join(' ')}
+        className={[styles.navbar, styles.scrolled].join(' ')}
         role="banner"
       >
         <div className={styles.inner}>
@@ -101,7 +101,7 @@ export const Navbar = memo(function Navbar() {
             <img
               src={logoImg}
               alt="Crealidad"
-              className={[styles.logoImg, isScrolled ? styles.logoImgScrolled : ''].filter(Boolean).join(' ')}
+              className={[styles.logoImg, styles.logoImgScrolled].join(' ')}
             />
             <span className={styles.logoSub}>Sound Breath</span>
           </button>

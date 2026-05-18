@@ -22,13 +22,15 @@
     "title": "Jofra",
     "subtitle": "Sound & Breath Guide",
     "bio_1": "My name is Jofra and for years I have explored the connection between sound, breath, and human wellbeing. What began as a personal search became my vocation: accompanying others on their healing journey.",
-    "bio_2": "Through deep practice with Tibetan bowls, gongs, and breathwork techniques, I have developed an integrative approach that reconnects body, mind, and spirit. Each session is a sacred space of transformation.",
-    "quote": "\"Sound is the bridge between the outer world and the inner universe\"",
+    "bio_2": "Through work with binaural frequencies, immersive and enveloping sound, essences, and healing frequencies, I have developed an integrative approach that reconnects body, mind, and spirit. Each session is a sacred space of transformation.",
+    "quote": "\"Breath is the bridge between the outer world and the inner universe\"",
     "certifications": "Training & Certifications",
     "cert_1": "Sound Healing Certification — International Sound Academy",
     "cert_2": "Transformational Breathwork Training",
-    "cert_3": "Advanced practice with Tibetan and crystal bowls",
-    "cert_4": "Meditation and mindfulness facilitator",
+    "cert_3": "Gamma Healer",
+    "cert_4": "Breathing Coach",
+    "cert_5": "Advanced practice with Tibetan and crystal bowls",
+    "cert_6": "Meditation and mindfulness facilitator",
     "stats": {
       "experience": "Years of experience",
       "sessions": "Sessions completed",
@@ -44,50 +46,50 @@
     "book": "Book session",
     "learn_more": "Learn more",
     "sound": {
-      "title": "Sound Healing",
-      "desc": "Immerse yourself in a sound bath with Tibetan bowls, gongs, and lyres. The vibrations penetrate every cell of your body, dissolving energetic blockages and restoring natural balance.",
-      "duration": "60 — 90 min",
-      "price": "$80"
+      "title": "Breathwork & Sound Healing",
+      "desc": "An integrative experience combining conscious breathing techniques with an immersive and enveloping sound bath. Healing frequencies and breath work together to release deep blockages and restore your energetic balance.",
+      "duration": "120 — 180 min",
+      "price": "$900"
     },
     "breath": {
-      "title": "Breathwork",
-      "desc": "Conscious breathing techniques that activate your parasympathetic nervous system, release accumulated tension, and expand your capacity for presence and inner connection.",
-      "duration": "60 min",
-      "price": "$70"
+      "title": "Sacred Medicine",
+      "desc": "Deep accompaniment — personalized or in an intimate group — integrating sacred medicine, essences, and frequencies to facilitate healing and consciousness expansion in a space of total trust.",
+      "duration": "60 — 240 min",
+      "price": "$1,500"
     },
     "fusion": {
-      "title": "Sound Breath Fusion",
-      "desc": "The perfect synergy: we combine conscious breathing with sound bath for a profound transformation experience. The most complete therapy I offer.",
-      "duration": "90 — 120 min",
-      "price": "$120"
+      "title": "Mental & Emotional Reprogramming",
+      "desc": "Session focused on deactivating limiting patterns through binaural frequencies, breathwork, and energy work. Reconnect your mind and emotions toward states of greater freedom, clarity, and wholeness.",
+      "duration": "90 min",
+      "price": "$1,000"
     },
     "group": {
-      "title": "Group Session",
-      "desc": "Share the experience with an intimate group. The collective energy amplifies the healing effect of sound and breath. Ideal for companies, retreats, and communities.",
-      "duration": "90 min",
-      "price": "$40/person"
+      "title": "Adaptogenic Treatments",
+      "desc": "Personalized macro and micro-dose protocols with adaptogenic plants to support your nervous system, reduce chronic stress, and elevate vitality. Continuous accompaniment and follow-up throughout the process.",
+      "duration": "30 — 120 days",
+      "price": "$1,000"
     }
   },
   "experience": {
     "label": "The Experience",
-    "title": "What is a session like?",
-    "subtitle": "A four-stage journey toward deep restoration",
+    "title": "What is a group session like?",
+    "subtitle": "A collective four-stage journey through Breathwork",
     "steps": {
       "arrival": {
-        "title": "Arrival & presence",
-        "desc": "We begin with a brief conversation to understand your intention. We create a safe and sacred space for your experience."
+        "title": "Arrival & opening circle",
+        "desc": "We gather as a group, share intentions, and together create a safe and sacred container. The collective energy amplifies each participant's experience."
       },
       "breathwork": {
-        "title": "Breathwork preparation",
-        "desc": "Guided breathing techniques that calm the mind and open the body to receive the vibrations of sound."
+        "title": "Breathwork activation",
+        "desc": "I guide the group through conscious breathing techniques that activate the nervous system, release accumulated tension, and open expanded states of consciousness."
       },
       "soundbath": {
-        "title": "Sound bath",
-        "desc": "Lying comfortably, I envelop you in layers of therapeutic sound. The vibrations work on cellular and energetic levels."
+        "title": "Sound immersion",
+        "desc": "Lying in comfort, healing frequencies and enveloping sound deepen the Breathwork state, guiding each person into their own inner journey."
       },
       "integration": {
-        "title": "Integration",
-        "desc": "A time for silence and reflection. We share the experience and I guide you back to the present with full awareness."
+        "title": "Collective integration",
+        "desc": "We close with a sharing circle. Each experience is unique; we accompany the return to the present with full presence and love for the process."
       }
     },
     "testimonials": {
@@ -135,22 +137,29 @@
     "title": "Frequently asked questions",
     "subtitle": "Everything you need to know before your first session",
     "q1": "Do I need previous meditation experience?",
-    "a1": "No. Sessions are accessible to everyone, regardless of experience. You only need to arrive with an open mind and willingness to experience.",
-    "q2": "What should I wear to the session?",
-    "a2": "Comfortable, loose clothing. We provide a blanket, pillow, and eye mask. You don't need to bring anything special.",
+    "a1": "No. Sessions are accessible to everyone, regardless of experience. You only need to arrive with an open mind and willingness for the experience, to transform limiting patterns.",
+    "q2": "What should I bring to the session?",
+    "a2": "Comfortable clothing, a water bottle, your yoga mat, and a blanket. We provide a pillow, blinders, and headphones.",
     "q3": "How often should I have sessions?",
-    "a3": "For optimal results, I recommend starting with weekly sessions during the first month, then spacing them according to your needs. Many clients enjoy a monthly session as a maintenance practice.",
+    "a3": "For more consistent results, I recommend starting with one session per month, then spacing them according to your needs. Many clients enjoy a monthly session as a maintenance practice.",
     "q4": "Is breathwork safe for everyone?",
-    "a4": "Breathwork has contraindications. Please inform about medical conditions (pregnancy, heart conditions, epilepsy) before the session. I always adapt techniques to each person.",
+    "a4": "Breathwork has contraindications. Please inform about medical conditions (pregnancy, heart conditions, epilepsy, and asthma) before the session. We always seek to adapt the work in the session for each person.",
     "q5": "Can I combine these therapies with medical treatments?",
-    "a5": "Yes. These therapies are complementary and do not replace medical treatment. Many health professionals recommend sound healing as a therapeutic complement.",
+    "a5": "Yes. These therapies are complementary and do not replace medical treatment. Many health professionals attend and recommend breathwork as a therapeutic complement.",
     "q6": "Do you offer online sessions?",
-    "a6": "I currently offer in-person sessions. Online breathwork sessions are available upon consultation.",
+    "a6": "Breathwork sessions are in-person and you can take therapeutic sessions online for better results as a complement to these 2 therapies.",
     "q7": "What is the cancellation policy?",
-    "a7": "You can cancel or reschedule with 24 hours notice at no cost. Late cancellations may require payment of 50% of the session fee."
+    "a7": "You can cancel or reschedule with 24 hours notice at no cost. There are no refunds but you can reschedule to the next available date."
+  },
+  "tiktok": {
+    "eyebrow": "Follow me on TikTok",
+    "title_1": "Transform your life in",
+    "title_2": "60 seconds",
+    "subtitle": "Real breathwork and sound healing techniques you can practice today.",
+    "cta": "See more on TikTok"
   },
   "footer": {
-    "tagline": "Healing through sound and breath",
+    "tagline": "Healing through therapy, sound and breath",
     "quote": "\"Every breath is an opportunity to be reborn\"",
     "quick_links": "Quick links",
     "social": "Follow me",
@@ -161,6 +170,6 @@
       "button": "Subscribe",
       "success": "Welcome to the community!"
     },
-    "copyright": "© 2024 Crealidad. All rights reserved."
+    "copyright": "© 2011 Crealidad. All rights reserved."
   }
 }

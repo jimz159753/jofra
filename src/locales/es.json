@@ -22,13 +22,15 @@
     "title": "Jofra",
     "subtitle": "Guía de sonido y respiración",
     "bio_1": "Mi nombre es Jofra y durante años he explorado la conexión entre el sonido, la respiración y el bienestar del ser humano. Lo que comenzó como una búsqueda personal se convirtió en mi vocación: acompañar a otros en su camino de sanación.",
-    "bio_2": "A través de la práctica profunda con cuencos tibetanos, gongs y técnicas de breathwork, he desarrollado un enfoque integrador que reconecta cuerpo, mente y espíritu. Cada sesión es un espacio sagrado de transformación.",
-    "quote": "\"El sonido es el puente entre el mundo exterior y el universo interior\"",
+    "bio_2": "A través del trabajo con frecuencias binaurales, sonido envolvente e inmersivo, esencias y frecuencias sanadoras, he desarrollado un enfoque integrador que reconecta cuerpo, mente y espíritu. Cada sesión es un espacio sagrado de transformación.",
+    "quote": "\"La respiración es el puente entre el mundo exterior y el universo interior\"",
     "certifications": "Formación y Certificaciones",
     "cert_1": "Certificación en Sound Healing — Academia Internacional de Sonido",
     "cert_2": "Formación en Breathwork Transformacional",
-    "cert_3": "Práctica avanzada en cuencos tibetanos y cristalinos",
-    "cert_4": "Facilitadora de meditación y mindfulness",
+    "cert_3": "Gamma Healer",
+    "cert_4": "Breathing Coach",
+    "cert_5": "Práctica avanzada en cuencos tibetanos y cristalinos",
+    "cert_6": "Facilitadora de meditación y mindfulness",
     "stats": {
       "experience": "Años de experiencia",
       "sessions": "Sesiones realizadas",
@@ -44,50 +46,50 @@
     "book": "Reservar sesión",
     "learn_more": "Saber más",
     "sound": {
-      "title": "Sound Healing",
-      "desc": "Sumérgete en un baño de sonido con cuencos tibetanos, gongs y liras. Las vibraciones penetran cada célula de tu cuerpo, disolviendo bloqueos energéticos y restaurando el equilibrio natural.",
-      "duration": "60 — 90 min",
-      "price": "$80"
+      "title": "Breathwork & Sound Healing",
+      "desc": "Una experiencia integradora que combina técnicas de respiración consciente con un baño de sonido envolvente e inmersivo. Las frecuencias sanadoras y la respiración trabajan juntas para liberar bloqueos profundos y restaurar tu equilibrio energético.",
+      "duration": "120 — 180 min",
+      "price": "$900"
     },
     "breath": {
-      "title": "Breathwork",
-      "desc": "Técnicas de respiración consciente que activan tu sistema nervioso parasimpático, liberan tensiones acumuladas y expanden tu capacidad de presencia y conexión interior.",
-      "duration": "60 min",
-      "price": "$70"
+      "title": "Medicina Sagrada",
+      "desc": "Acompañamiento profundo —personalizado o en grupo íntimo— que integra medicina sagrada, esencias y frecuencias para facilitar procesos de sanación y expansión de consciencia en un espacio de total confianza.",
+      "duration": "60 — 240 min",
+      "price": "$1,500"
     },
     "fusion": {
-      "title": "Sound Breath Fusion",
-      "desc": "La sinergia perfecta: combinamos la respiración consciente con el baño de sonido para una experiencia de transformación profunda. La terapia más completa que ofrezco.",
-      "duration": "90 — 120 min",
-      "price": "$120"
+      "title": "Reprogramación Mental y Emocional",
+      "desc": "Sesión enfocada en desactivar patrones limitantes a través de frecuencias binaurales, breathwork y trabajo energético. Reconecta tu mente y emociones hacia estados de mayor libertad, claridad y plenitud.",
+      "duration": "90 min",
+      "price": "$1,000"
     },
     "group": {
-      "title": "Sesión Grupal",
-      "desc": "Comparte la experiencia con un grupo íntimo. La energía colectiva amplifica el efecto sanador del sonido y la respiración. Ideal para empresas, retiros y comunidades.",
-      "duration": "90 min",
-      "price": "$40/persona"
+      "title": "Tratamientos Adaptógenos",
+      "desc": "Protocolos personalizados de macro y micro dosis con plantas adaptógenas para apoyar tu sistema nervioso, reducir el estrés crónico y elevar la vitalidad. Acompañamiento continuo y seguimiento a lo largo del proceso.",
+      "duration": "30 — 120 días",
+      "price": "$1,000"
     }
   },
   "experience": {
     "label": "La Experiencia",
-    "title": "¿Cómo es una sesión?",
-    "subtitle": "Un viaje de cuatro etapas hacia la restauración profunda",
+    "title": "¿Cómo es una sesión grupal?",
+    "subtitle": "Un viaje colectivo de cuatro etapas a través del Breathwork",
     "steps": {
       "arrival": {
-        "title": "Llegada y presencia",
-        "desc": "Comenzamos con una conversación breve para entender tu intención. Creamos un espacio seguro y sagrado para tu experiencia."
+        "title": "Llegada y círculo de apertura",
+        "desc": "Nos reunimos en grupo, compartimos intenciones y creamos juntos un espacio seguro y sagrado. La energía colectiva potencia la experiencia de cada participante."
       },
       "breathwork": {
-        "title": "Preparación con respiración",
-        "desc": "Técnicas de respiración guiada que calman la mente y abren el cuerpo para recibir las vibraciones del sonido."
+        "title": "Activación del Breathwork",
+        "desc": "Guío al grupo a través de técnicas de respiración consciente que activan el sistema nervioso, liberan tensiones acumuladas y abren estados expandidos de consciencia."
       },
       "soundbath": {
-        "title": "Baño de sonido",
-        "desc": "Recostado en comodidad, te envuelvo en capas de sonido terapéutico. Las vibraciones trabajan en niveles celulares y energéticos."
+        "title": "Inmersión en el sonido",
+        "desc": "Recostados en comodidad, las frecuencias sanadoras y el sonido envolvente profundizan el estado de Breathwork, llevando a cada persona a su propio viaje interior."
       },
       "integration": {
-        "title": "Integración",
-        "desc": "Un tiempo de silencio y reflexión. Compartimos la experiencia y te llevo de regreso al presente con plena consciencia."
+        "title": "Integración colectiva",
+        "desc": "Cerramos con un círculo de compartir. Cada experiencia es única; acompañamos el retorno al presente con presencia plena y amor por el proceso."
       }
     },
     "testimonials": {
@@ -135,22 +137,29 @@
     "title": "Preguntas frecuentes",
     "subtitle": "Todo lo que necesitas saber antes de tu primera sesión",
     "q1": "¿Necesito experiencia previa en meditación?",
-    "a1": "No. Las sesiones son accesibles para todo tipo de personas, independientemente de su experiencia. Solo necesitas llegar con mente abierta y disposición para la experiencia.",
-    "q2": "¿Qué debo usar para la sesión?",
-    "a2": "Ropa cómoda y suelta. Te proporcionamos manta, cojín y parche para los ojos. No necesitas traer nada especial.",
+    "a1": "No. Las sesiones son accesibles para todo tipo de personas, independientemente de su experiencia. Solo necesitas llegar con mente abierta y disposición para la experiencia, a transformar patrones limitantes.",
+    "q2": "¿Qué debo llevar a la sesión?",
+    "a2": "Ropa cómoda, un termo con agua, tu tapete de yoga y una manta. Nosotros te proporcionamos una almohada, blinders y audífonos.",
     "q3": "¿Con qué frecuencia debo tener sesiones?",
-    "a3": "Para resultados óptimos, recomiendo iniciar con sesiones semanales durante el primer mes, luego espaciarlas según tus necesidades. Muchos clientes disfrutan una sesión mensual como práctica de mantenimiento.",
+    "a3": "Para resultados más consistentes, recomiendo iniciar con una sesión al mes, luego espaciarlas según tus necesidades. Muchos clientes disfrutan una sesión mensual como práctica de mantenimiento.",
     "q4": "¿Es seguro el breathwork para todos?",
-    "a4": "El breathwork tiene contraindicaciones. Por favor informa sobre condiciones médicas (embarazo, problemas cardíacos, epilepsia) antes de la sesión. Siempre adapto las técnicas a cada persona.",
+    "a4": "El breathwork tiene contraindicaciones. Por favor informa sobre condiciones médicas (embarazo, problemas cardíacos, epilepsia y asma) antes de la sesión. Siempre buscamos adaptar el trabajo en la sesión para cada persona.",
     "q5": "¿Puedo combinar estas terapias con tratamientos médicos?",
-    "a5": "Sí. Estas terapias son complementarias y no sustituyen el tratamiento médico. Muchos profesionales de salud recomiendan el sound healing como complemento terapéutico.",
+    "a5": "Sí. Estas terapias son complementarias y no sustituyen el tratamiento médico. Muchos profesionales de salud asisten y recomiendan el breathwork como complemento terapéutico.",
     "q6": "¿Ofrecen sesiones en línea?",
-    "a6": "Actualmente ofrezco sesiones presenciales. Las sesiones online de breathwork están disponibles bajo consulta.",
+    "a6": "Las sesiones de breathwork son presenciales y puedes tomar en línea las sesiones terapéuticas para tener mejores resultados en el complemento de estas 2 terapias.",
     "q7": "¿Cuál es la política de cancelación?",
-    "a7": "Puedes cancelar o reprogramar con 24 horas de anticipación sin costo. Cancelaciones tardías pueden requerir el pago del 50% de la sesión."
+    "a7": "Puedes cancelar o reprogramar con 24 horas de anticipación sin costo. No hay devolución pero se puede reagendar en la siguiente fecha."
+  },
+  "tiktok": {
+    "eyebrow": "Sígueme en TikTok",
+    "title_1": "Transforma tu vida en",
+    "title_2": "60 segundos",
+    "subtitle": "Técnicas reales de breathwork y sound healing que puedes practicar hoy.",
+    "cta": "Ver más en TikTok"
   },
   "footer": {
-    "tagline": "Sanando a través del sonido y la respiración",
+    "tagline": "Sanando a través de la terapia, el sonido y la respiración",
     "quote": "\"Cada respiración es una oportunidad de renacer\"",
     "quick_links": "Links rápidos",
     "social": "Sígueme",
@@ -161,6 +170,6 @@
       "button": "Suscribirme",
       "success": "¡Bienvenido/a a la comunidad!"
     },
-    "copyright": "© 2024 Crealidad. Todos los derechos reservados."
+    "copyright": "© 2011 Crealidad. Todos los derechos reservados."
   }
 }

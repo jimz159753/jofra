@@ -1,8 +1,9 @@
 import { useRef, useState, useCallback, useEffect, memo } from 'react'
+import { useTranslation } from 'react-i18next'
 import { createPortal } from 'react-dom'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
-import bornoutVideo from '@assets/videos/bornout.mp4'
+import respirarVideo from '@assets/videos/respirar.mp4'
 import entrepreneurVideo from '@assets/videos/entrepreneur.mp4'
 import styles from './TikTokSection.module.css'
 
@@ -292,12 +293,12 @@ const TikTokCard = memo(function TikTokCard({
 /* ── Section ─────────────────────────────────────────── */
 const VIDEOS = [
   {
-    src: bornoutVideo,
+    src: respirarVideo,
     username: 'Jofra',
     handle: 'jofra.soundbreath',
-    caption: '¿Tu cuerpo te habla de burnout? Así es como el sonido lo sana 🎵',
-    tags: ['burnout', 'soundhealing', 'bienestar', 'terapia'],
-    song: 'Tibetan Singing Bowl — Sound Bath Mix',
+    caption: 'Así se siente respirar de verdad 🌬️ Técnica de 60 segundos para calmar tu sistema nervioso',
+    tags: ['breathwork', 'respiracion', 'bienestar', 'sanar'],
+    song: 'Ocean Breath — Healing Frequency 432Hz',
     likes: '24.2K',
     comments: '843',
     shares: '1.1K',
@@ -316,6 +317,7 @@ const VIDEOS = [
 ]
 
 export const TikTokSection = memo(function TikTokSection() {
+  const { t } = useTranslation()
   const sectionRef = useRef<HTMLElement>(null)
   const phonesRef = useRef<HTMLDivElement>(null)
   const [activeVideo, setActiveVideo] = useState<typeof VIDEOS[number] | null>(null)
@@ -364,13 +366,13 @@ export const TikTokSection = memo(function TikTokSection() {
 
       <div className={styles.container}>
         <div data-tiktok-header className={styles.header}>
-          <span className={styles.eyebrow}>✦ Sígueme en TikTok</span>
+          <span className={styles.eyebrow}>✦ {t('tiktok.eyebrow')}</span>
           <h2 id="tiktok-heading" className={styles.title}>
-            Transforma tu vida en<br />
-            <em>60 segundos</em>
+            {t('tiktok.title_1')}<br />
+            <em>{t('tiktok.title_2')}</em>
           </h2>
           <p className={styles.subtitle}>
-            Técnicas reales de breathwork y sound healing que puedes practicar hoy.
+            {t('tiktok.subtitle')}
           </p>
         </div>
 
@@ -393,7 +395,7 @@ export const TikTokSection = memo(function TikTokSection() {
             <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
               <path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.78a8.27 8.27 0 004.84 1.55V6.89a4.85 4.85 0 01-1.07-.2z"/>
             </svg>
-            Seguir en TikTok
+            {t('tiktok.cta')}
           </a>
         </div>
       </div>

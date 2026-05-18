@@ -61,6 +61,8 @@ export const AboutSection = memo(function AboutSection({ compact = false }: Abou
     t('about.cert_2'),
     t('about.cert_3'),
     t('about.cert_4'),
+    t('about.cert_5'),
+    t('about.cert_6'),
   ]
 
   useEffect(() => {
@@ -128,11 +130,11 @@ export const AboutSection = memo(function AboutSection({ compact = false }: Abou
       </div>
 
       <div data-about-item className={styles.stats}>
-        <AnimatedStat end={8} suffix="+" label={t('about.stats.experience')} />
+        <AnimatedStat end={15} suffix="+" label={t('about.stats.experience')} />
         <div className={styles.statDivider} aria-hidden="true" />
         <AnimatedStat end={500} suffix="+" label={t('about.stats.sessions')} />
         <div className={styles.statDivider} aria-hidden="true" />
-        <AnimatedStat end={300} suffix="+" label={t('about.stats.clients')} />
+        <AnimatedStat end={3000} suffix="+" label={t('about.stats.clients')} />
       </div>
     </Section>
   )
