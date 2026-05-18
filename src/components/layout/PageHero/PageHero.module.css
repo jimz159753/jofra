@@ -5,9 +5,9 @@
   overflow: hidden;
   background: linear-gradient(
     150deg,
-    #07191b 0%,
+    #070e1a 0%,
     var(--color-deep-teal) 55%,
-    #0f2e32 100%
+    #0d2240 100%
   );
 }
 

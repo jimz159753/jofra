@@ -1,13 +1,13 @@
 :root {
   /* === COLOR PALETTE === */
-  --color-deep-teal: #1a3c40;
-  --color-teal-mid: #2d5a5f;
-  --color-teal-light: #3d7a80;
+  --color-deep-teal: #0a1628;
+  --color-teal-mid: #14325a;
+  --color-teal-light: #3d7ab5;
   --color-sand: #c9a96e;
   --color-sand-light: #dfc496;
   --color-sand-pale: #f5ead8;
-  --color-mist: #e8f4f4;
-  --color-mist-dark: #c8e6e6;
+  --color-mist: #f0f5f9;
+  --color-mist-dark: #c4d5e4;
   --color-charcoal: #2c2c2c;
   --color-charcoal-light: #4a4a4a;
   --color-white: #ffffff;
@@ -81,12 +81,12 @@
   --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.1);
   --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.12);
   --shadow-xl: 0 16px 48px rgba(0, 0, 0, 0.16);
-  --shadow-teal: 0 8px 32px rgba(26, 60, 64, 0.25);
+  --shadow-teal: 0 8px 32px rgba(10, 22, 40, 0.3);
   --shadow-sand: 0 8px 32px rgba(201, 169, 110, 0.3);
 
   /* === GLASSMORPHISM === */
   --glass-bg: rgba(255, 255, 255, 0.12);
-  --glass-bg-dark: rgba(26, 60, 64, 0.15);
+  --glass-bg-dark: rgba(10, 22, 40, 0.15);
   --glass-border: rgba(255, 255, 255, 0.2);
   --glass-blur: blur(16px);
 

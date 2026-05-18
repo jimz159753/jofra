@@ -19,10 +19,10 @@
 
 /* ── Al hacer scroll: fondo frosted glass claro ── */
 .scrolled {
-  background: rgba(232, 244, 244, 0.93);
+  background: rgba(240, 245, 249, 0.95);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
-  box-shadow: 0 1px 0 rgba(26, 60, 64, 0.08), var(--shadow-sm);
+  box-shadow: 0 1px 0 rgba(10, 22, 40, 0.08), var(--shadow-sm);
 }
 
 /* ── Inner layout ─────────────────────────────── */

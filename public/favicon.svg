@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
   <!-- Background: rounded square, deep teal -->
-  <rect width="32" height="32" rx="6" fill="#07191b"/>
+  <rect width="32" height="32" rx="6" fill="#0a1628"/>
 
   <!-- C arc centered at (13, 16), radius 8, gap opening right ~±52° -->
   <path d="M 17.9 9.7 A 8 8 0 1 0 17.9 22.3"
