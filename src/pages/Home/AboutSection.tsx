@@ -4,7 +4,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { useTranslation } from 'react-i18next'
 import { Section } from '@components/layout/Section/Section'
 import { Badge } from '@components/ui/Badge/Badge'
-import sleepImg from '@assets/images/sleep.jpg'
+import jofraImg from '@assets/images/jofra.png'
 import styles from './AboutSection.module.css'
 
 gsap.registerPlugin(ScrollTrigger)
@@ -89,10 +89,11 @@ export const AboutSection = memo(function AboutSection({ compact = false }: Abou
         <div data-about-item className={styles.imageCol}>
           <div className={styles.imageWrapper}>
             <img
-              src={sleepImg}
+              src={jofraImg}
               alt="Jofra — guía de sonido y respiración"
               className={styles.image}
             />
+            <div className={styles.imageOverlay} aria-hidden="true" />
             <div className={styles.imageDecor} aria-hidden="true" />
           </div>
         </div>

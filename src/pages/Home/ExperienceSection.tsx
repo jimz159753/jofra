@@ -65,49 +65,49 @@ const CONVERSATIONS: Conversation[] = [
   {
     name: 'María G.', avatarLetter: 'M', avatarColor: '#7b9e8a', lastSeen: 'en línea',
     messages: [
-      { from: 'client', text: 'Hola Jofra, llevo meses con mucho estrés del trabajo. ¿Crees que el sound healing me puede ayudar?', time: '10:14' },
-      { from: 'jofra', text: '¡Hola María! Totalmente. Las vibraciones de los cuencos actúan directo sobre el sistema nervioso y liberan esa tensión acumulada 🎵 ¿Te animas a probar una sesión?', time: '10:16', read: true },
-      { from: 'client', text: 'La sesión fue una de las experiencias más profundas de mi vida. El sonido de los cuencos me llevó a un estado de paz que nunca había sentido. ¡Mil gracias! ✨', time: '10:58' },
+      { from: 'client', text: 'Hola Jofra, llevo meses con mucho estrés en el trabajo. ¿Crees que una sesión de Breathwork me puede ayudar?', time: '10:14' },
+      { from: 'jofra', text: 'Sin duda te ayudará, María. La bioquímica que se genera durante la sesión, combinada con las vibraciones de las frecuencias, mueve tu sistema nervioso y libera esa tensión acumulada. ¿Estás lista para darte esa oportunidad? 🌬️', time: '10:16', read: true },
+      { from: 'client', text: 'Las terapias de respiración me han ayudado mucho y quiero seguir avanzando. Me gustaría tomar una sesión de Breathwork por lo menos cada mes ✨', time: '10:58' },
     ],
   },
   {
     name: 'Carlos M.', avatarLetter: 'C', avatarColor: '#8a7b9e', lastSeen: 'última vez hoy a las 11:30',
     messages: [
-      { from: 'client', text: 'Tengo ansiedad crónica desde hace tiempo. ¿Realmente funciona el breathwork para eso?', time: '11:02' },
-      { from: 'jofra', text: 'Carlos, comprendo perfectamente. El breathwork activa el sistema nervioso parasimpático y disuelve la ansiedad desde la raíz 🌬️ Muchos clientes ven cambios desde la primera sesión.', time: '11:05', read: true },
-      { from: 'client', text: 'Llegué con ansiedad y salí sintiéndome como nuevo. La combinación de respiración y sonido es simplemente mágica. Ya reservé mi siguiente sesión 🙌', time: '11:48' },
+      { from: 'client', text: 'Tengo ansiedad crónica desde hace tiempo. ¿Realmente funciona el Breathwork para eso?', time: '11:02' },
+      { from: 'jofra', text: 'El Breathwork activa tu sistema nervioso en su capacidad de resolución, disolviendo la ansiedad desde la raíz. Para resultados duraderos, te recomiendo complementarlo con terapia personalizada para trabajar la causa específica 🌬️ ¿Te animas?', time: '11:05', read: true },
+      { from: 'client', text: 'Me encanta saber que hay un proceso real y no solo una experiencia pasajera. Que me guíen y acompañen hasta resolver la ansiedad es exactamente lo que necesitaba. Muchas gracias 🙌', time: '11:48' },
     ],
   },
   {
     name: 'Laura P.', avatarLetter: 'L', avatarColor: '#9e8a7b', lastSeen: 'en línea',
     messages: [
-      { from: 'client', text: 'Nunca he meditado antes y me da un poco de miedo... ¿está bien ir sin experiencia?', time: '16:20' },
-      { from: 'jofra', text: '¡Claro que sí Laura! No se necesita ninguna experiencia previa. Solo llegas, te recuestas y dejas que el sonido haga su trabajo 🌿 Yo te guío en todo momento.', time: '16:23', read: true },
-      { from: 'client', text: 'Jofra crea un espacio de total confianza y seguridad. Su presencia es sanadora en sí misma. La terapia cambió mi relación con mi propio cuerpo 💛', time: '17:10' },
+      { from: 'client', text: 'Nunca he meditado antes y me da un poco de miedo. ¿Está bien ir sin experiencia?', time: '16:20' },
+      { from: 'jofra', text: '¡Claro que sí Laura! No se necesita ninguna experiencia previa. Solo llega con disposición y confianza de que serás guiada de manera segura, divertida y consciente en cada paso 🌿', time: '16:23', read: true },
+      { from: 'client', text: 'Fue mucho más cómodo de lo que imaginaba. Me sentí completamente segura y guiada en todo momento. La experiencia fue hermosa y transformadora 💛', time: '17:10' },
     ],
   },
   {
     name: 'Sofía R.', avatarLetter: 'S', avatarColor: '#9e7b8a', lastSeen: 'última vez ayer',
     messages: [
-      { from: 'client', text: 'Oye Jofra, ¿tienes disponibilidad esta semana? Me recomendaron muchísimo tus sesiones.', time: '09:30' },
-      { from: 'jofra', text: '¡Hola Sofía! Sí tengo espacios. ¿Qué buscas trabajar? Podemos elegir entre sound healing, breathwork o la sesión fusión 🌀', time: '09:33', read: true },
-      { from: 'client', text: 'Salí completamente renovada. Nunca pensé que el sonido pudiera mover tantas cosas dentro de mí. Fue una experiencia transformadora de verdad 🌸', time: '19:45' },
+      { from: 'client', text: '¡Qué tal Jofra! ¿Tienes disponibilidad esta semana? Me recomendaron muchísimo tus sesiones.', time: '09:30' },
+      { from: 'jofra', text: 'Tengo espacios disponibles para terapia de sanación de memorias, que te prepara para llegar más ligera y liberada a la sesión de Breathwork y aprovecharla al máximo ✨', time: '09:33', read: true },
+      { from: 'client', text: 'Me encantaría ese nivel de acompañamiento antes y después del Breathwork. ¡Quiero anotarme a todas las sesiones que tengas disponibles en mi ciudad! 🌸', time: '19:45' },
     ],
   },
   {
     name: 'Andrés V.', avatarLetter: 'A', avatarColor: '#7b8a9e', lastSeen: 'en línea',
     messages: [
-      { from: 'client', text: 'Jofra, fui muy escéptico al principio pero mi pareja me convenció. ¿Vale la pena intentarlo?', time: '14:05' },
-      { from: 'jofra', text: 'Entiendo el escepticismo, Andrés 😊 Solo te pido que llegues con mente abierta. El cuerpo responde aunque la mente dude. Muchos escépticos son ahora mis clientes más fieles.', time: '14:09', read: true },
-      { from: 'client', text: 'Tienes razón. Fue increíble. Me quedé dormido durante la sesión y desperté llorando de alivio. No sé cómo explicarlo pero algo se soltó dentro de mí 🙏', time: '18:22' },
+      { from: 'client', text: 'Fui muy escéptico al principio pero mi pareja me convenció. ¿Realmente vale la pena intentar mejorar mi vida con Breathwork?', time: '14:05' },
+      { from: 'jofra', text: 'Entiendo el escepticismo, Andrés. Llevo más de 15 años en esto y los más escépticos suelen ser mis clientes más satisfechos. Asiste sin expectativas, solo con apertura. El cuerpo responde aunque la mente dude 😊', time: '14:09', read: true },
+      { from: 'client', text: 'Tenías razón. En algún momento me quedé dormido y desperté con un llanto de alivio. Algo que me angustiaba se soltó por dentro. Muy liberado y agradecido 🙏🏼', time: '18:22' },
     ],
   },
   {
     name: 'Valeria T.', avatarLetter: 'V', avatarColor: '#8a9e7b', lastSeen: 'última vez hoy a las 08:15',
     messages: [
-      { from: 'client', text: '¿Se puede hacer breathwork si tengo problemas de ansiedad severa? No quiero que me afecte.', time: '08:10' },
-      { from: 'jofra', text: 'Valeria, siempre adapto las técnicas a cada persona. Con ansiedad severa usamos respiraciones suaves y progresivas. Tu seguridad es lo primero 💙 ¿Conversamos antes de la sesión?', time: '08:14', read: true },
-      { from: 'client', text: 'Gracias por la charla previa, me dio mucha confianza. La sesión fue gentil y profunda. Por primera vez en meses pude soltar la tensión del cuerpo completamente ✨', time: '21:03' },
+      { from: 'client', text: '¿Se puede hacer Breathwork si tengo ansiedad severa? No quiero que me afecte.', time: '08:10' },
+      { from: 'jofra', text: 'Te recomiendo comenzar con sesiones de sanación de memorias para trabajar la raíz de la ansiedad. Después el Breathwork será con respiraciones suaves y progresivas, siempre cuidando cada momento del proceso 💙', time: '08:14', read: true },
+      { from: 'client', text: 'Hacer las sesiones de sanación antes fue clave. En el Breathwork pude soltar la tensión que me había acompañado durante años. Quiero seguir con este proceso que complementa todo de manera magistral 🌸', time: '21:03' },
     ],
   },
 ]

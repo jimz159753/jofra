@@ -29,6 +29,22 @@
   display: block;
 }
 
+.imageOverlay {
+  position: absolute;
+  inset: 0;
+  width: 360px;
+  height: 440px;
+  max-width: 100%;
+  border-radius: var(--radius-blob);
+  animation: morphBlob 8s ease-in-out infinite;
+  background: rgba(10, 22, 40, 0.28);
+  pointer-events: none;
+}
+
+@media (max-width: 768px) {
+  .imageOverlay { width: 280px; height: 340px; }
+}
+
 .imageDecor {
   position: absolute;
   bottom: -20px;
