@@ -20,7 +20,7 @@
   "about": {
     "label": "About me",
     "title": "Jofra",
-    "subtitle": "Sound & Breath Guide",
+    "subtitle": "Psychologist — Therapeutic Sound & Breath Guide",
     "bio_1": "My name is Jofra and for years I have explored the connection between sound, breath, and human wellbeing. What began as a personal search became my vocation: accompanying others on their healing journey.",
     "bio_2": "Through work with binaural frequencies, immersive and enveloping sound, essences, and healing frequencies, I have developed an integrative approach that reconnects body, mind, and spirit. Each session is a sacred space of transformation.",
     "quote": "\"Breath is the bridge between the outer world and the inner universe\"",
@@ -29,8 +29,8 @@
     "cert_2": "Transformational Breathwork Training",
     "cert_3": "Gamma Healer",
     "cert_4": "Breathing Coach",
-    "cert_5": "Advanced practice with Tibetan and crystal bowls",
-    "cert_6": "Meditation and mindfulness facilitator",
+    "cert_5": "Facilitator, guide, healer and integration through Sacred Medicines and spiritual technologies.",
+    "cert_6": "Advanced practice in Transpersonal Psychology and Biological & Mental Decoding.",
     "stats": {
       "experience": "Years of experience",
       "sessions": "Sessions completed",
@@ -53,19 +53,19 @@
     },
     "breath": {
       "title": "Sacred Medicine",
-      "desc": "Deep accompaniment — personalized or in an intimate group — integrating sacred medicine, essences, and frequencies to facilitate healing and consciousness expansion in a space of total trust.",
+      "desc": "Personalized and group integral transformation processes with natural Spiritual connection Medicines. Deep healing and professional integration. Experience, knowledge, professionalism, seriousness, professional therapeutic approach, follow-up, continuity and the greatest benefit in high-level healing experiences.",
       "duration": "60 — 240 min",
       "price": "$1,500"
     },
     "fusion": {
       "title": "Mental & Emotional Reprogramming",
-      "desc": "Session focused on deactivating limiting patterns through binaural frequencies, breathwork, and energy work. Reconnect your mind and emotions toward states of greater freedom, clarity, and wholeness.",
+      "desc": "Session focused on deactivating limiting patterns through advanced technologies, breathwork, and work with vital energy. Reconnect your mind and emotions toward states of greater freedom, clarity, and wholeness.",
       "duration": "90 min",
       "price": "$1,000"
     },
     "group": {
       "title": "Adaptogenic Treatments",
-      "desc": "Personalized macro and micro-dose protocols with adaptogenic plants to support your nervous system, reduce chronic stress, and elevate vitality. Continuous accompaniment and follow-up throughout the process.",
+      "desc": "Personalized macro and micro-dose protocols with adaptogenic mushrooms to support your nervous system, reduce chronic stress, and elevate vitality. Continuous accompaniment and follow-up throughout the process.",
       "duration": "30 — 120 days",
       "price": "$1,000"
     }

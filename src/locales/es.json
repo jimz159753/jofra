@@ -20,7 +20,7 @@
   "about": {
     "label": "Sobre mí",
     "title": "Jofra",
-    "subtitle": "Guía de sonido y respiración",
+    "subtitle": "Psicólogo — Guía terapéutica de sonido y respiración",
     "bio_1": "Mi nombre es Jofra y durante años he explorado la conexión entre el sonido, la respiración y el bienestar del ser humano. Lo que comenzó como una búsqueda personal se convirtió en mi vocación: acompañar a otros en su camino de sanación.",
     "bio_2": "A través del trabajo con frecuencias binaurales, sonido envolvente e inmersivo, esencias y frecuencias sanadoras, he desarrollado un enfoque integrador que reconecta cuerpo, mente y espíritu. Cada sesión es un espacio sagrado de transformación.",
     "quote": "\"La respiración es el puente entre el mundo exterior y el universo interior\"",
@@ -29,8 +29,8 @@
     "cert_2": "Formación en Breathwork Transformacional",
     "cert_3": "Gamma Healer",
     "cert_4": "Breathing Coach",
-    "cert_5": "Práctica avanzada en cuencos tibetanos y cristalinos",
-    "cert_6": "Facilitadora de meditación y mindfulness",
+    "cert_5": "Facilitador, guía, sanador e integración a través de Medicinas y tecnologías espirituales.",
+    "cert_6": "Práctica avanzada en Psicología transpersonal y Descodificación Biológica y Mental.",
     "stats": {
       "experience": "Años de experiencia",
       "sessions": "Sesiones realizadas",
@@ -53,19 +53,19 @@
     },
     "breath": {
       "title": "Medicina Sagrada",
-      "desc": "Acompañamiento profundo —personalizado o en grupo íntimo— que integra medicina sagrada, esencias y frecuencias para facilitar procesos de sanación y expansión de consciencia en un espacio de total confianza.",
+      "desc": "Procesos de transformación integral personalizados y grupales con Medicinas naturales de conexión Espiritual. Sanación profunda e integración profesional. Experiencia, conocimiento, profesionalismo, seriedad, enfoque terapéutico profesional, seguimiento, continuidad y el mayor beneficio en experiencias de alto nivel de sanación.",
       "duration": "60 — 240 min",
       "price": "$1,500"
     },
     "fusion": {
       "title": "Reprogramación Mental y Emocional",
-      "desc": "Sesión enfocada en desactivar patrones limitantes a través de frecuencias binaurales, breathwork y trabajo energético. Reconecta tu mente y emociones hacia estados de mayor libertad, claridad y plenitud.",
+      "desc": "Sesión enfocada en desactivar patrones limitantes a través de tecnologías avanzadas, breathwork y trabajo con la energía vital. Reconecta tu mente y emociones hacia estados de mayor libertad, claridad y plenitud.",
       "duration": "90 min",
       "price": "$1,000"
     },
     "group": {
       "title": "Tratamientos Adaptógenos",
-      "desc": "Protocolos personalizados de macro y micro dosis con plantas adaptógenas para apoyar tu sistema nervioso, reducir el estrés crónico y elevar la vitalidad. Acompañamiento continuo y seguimiento a lo largo del proceso.",
+      "desc": "Protocolos personalizados de macro y micro dosis con hongos adaptógenos para apoyar tu sistema nervioso, reducir el estrés crónico y elevar la vitalidad. Acompañamiento continuo y seguimiento a lo largo del proceso.",
       "duration": "30 — 120 días",
       "price": "$1,000"
     }
