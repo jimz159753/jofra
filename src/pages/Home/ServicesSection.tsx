@@ -110,8 +110,8 @@ const IcoGroup = () => (
 
 const SERVICES: { key: 'sound' | 'breath' | 'fusion' | 'group'; icon: ReactNode; featured?: boolean }[] = [
   { key: 'sound', icon: <IcoSound /> },
-  { key: 'breath', icon: <IcoBreath /> },
-  { key: 'fusion', icon: <IcoFusion />, featured: true },
+  { key: 'breath', icon: <IcoBreath />, featured: true },
+  { key: 'fusion', icon: <IcoFusion /> },
   { key: 'group', icon: <IcoGroup /> },
 ]
 
