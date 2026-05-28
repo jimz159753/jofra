@@ -44,6 +44,7 @@
     "duration": "Duration",
     "price": "From",
     "book": "Book session",
+    "watch_video": "Watch video",
     "learn_more": "Learn more",
     "sound": {
       "title": "Breathwork & Sound Healing",
@@ -52,7 +53,7 @@
       "price": "$900"
     },
     "breath": {
-      "title": "Sacred Medicine",
+      "title": "Ancestral Sacred Medicine",
       "desc": "Personalized and group integral transformation processes with natural Spiritual connection Medicines. Deep healing and professional integration. Experience, knowledge, professionalism, seriousness, professional therapeutic approach, follow-up, continuity and the greatest benefit in high-level healing experiences.",
       "duration": "60 — 240 min",
       "price": "$1,500"

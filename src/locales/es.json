@@ -44,6 +44,7 @@
     "duration": "Duración",
     "price": "Desde",
     "book": "Reservar sesión",
+    "watch_video": "Ver video",
     "learn_more": "Saber más",
     "sound": {
       "title": "Breathwork & Sound Healing",
@@ -52,7 +53,7 @@
       "price": "$900"
     },
     "breath": {
-      "title": "Medicina Sagrada",
+      "title": "Medicina Sagrada Ancestral",
       "desc": "Procesos de transformación integral personalizados y grupales con Medicinas naturales de conexión Espiritual. Sanación profunda e integración profesional. Experiencia, conocimiento, profesionalismo, seriedad, enfoque terapéutico profesional, seguimiento, continuidad y el mayor beneficio en experiencias de alto nivel de sanación.",
       "duration": "60 — 240 min",
       "price": "$1,500"

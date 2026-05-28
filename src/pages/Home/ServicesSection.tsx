@@ -1,14 +1,74 @@
-import { useEffect, useRef, memo, type ReactNode } from 'react'
+import { useEffect, useRef, memo, useState, useCallback, type ReactNode } from 'react'
+import { createPortal } from 'react-dom'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { useTranslation } from 'react-i18next'
 import { Section } from '@components/layout/Section/Section'
 import { Badge } from '@components/ui/Badge/Badge'
+import breathworkVideo from '@assets/videos/Breathwork.mp4'
+import medicinaVideo from '@assets/videos/Medicina ancestral.mp4'
+import reprogramacionVideo from '@assets/videos/Reprogramacion mental.mp4'
+import adaptogenosVideo from '@assets/videos/Tratamientos adaptogenos.mp4'
 import styles from './ServicesSection.module.css'
 
 gsap.registerPlugin(ScrollTrigger)
 
 const WA_LINK = 'https://wa.me/523310707648'
+
+const VIDEO_MAP: Record<string, string> = {
+  sound: breathworkVideo,
+  breath: medicinaVideo,
+  fusion: reprogramacionVideo,
+  group: adaptogenosVideo,
+}
+
+/* ── Video Modal ─────────────────────────────────── */
+const IcoClose = () => (
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" aria-hidden="true">
+    <line x1="18" y1="6" x2="6" y2="18" /><line x1="6" y1="6" x2="18" y2="18" />
+  </svg>
+)
+
+const IcoPlay = () => (
+  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+    <path d="M8 5v14l11-7z"/>
+  </svg>
+)
+
+interface VideoModalProps { src: string; title: string; onClose: () => void }
+
+const VideoModal = memo(function VideoModal({ src, title, onClose }: VideoModalProps) {
+  const overlayRef = useRef<HTMLDivElement>(null)
+  const wrapRef = useRef<HTMLDivElement>(null)
+  const videoRef = useRef<HTMLVideoElement>(null)
+
+  useEffect(() => {
+    gsap.fromTo(overlayRef.current, { opacity: 0 }, { opacity: 1, duration: 0.25, ease: 'power2.out' })
+    gsap.fromTo(wrapRef.current, { scale: 0.88, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.35, ease: 'back.out(1.4)' })
+    const v = videoRef.current
+    if (v) { v.muted = false; v.play().catch(() => { v.muted = true; v.play() }) }
+  }, [])
+
+  const close = useCallback(() => {
+    gsap.to(overlayRef.current, { opacity: 0, duration: 0.2, onComplete: onClose })
+  }, [onClose])
+
+  useEffect(() => {
+    const onKey = (e: KeyboardEvent) => { if (e.key === 'Escape') close() }
+    window.addEventListener('keydown', onKey)
+    return () => window.removeEventListener('keydown', onKey)
+  }, [close])
+
+  return createPortal(
+    <div ref={overlayRef} className={styles.modalOverlay} onClick={close} role="dialog" aria-modal="true" aria-label={title}>
+      <button className={styles.modalClose} onClick={close} aria-label="Cerrar video"><IcoClose /></button>
+      <div ref={wrapRef} className={styles.modalVideoWrap} onClick={e => e.stopPropagation()}>
+        <video ref={videoRef} src={src} className={styles.modalVideo} controls playsInline />
+      </div>
+    </div>,
+    document.body
+  )
+})
 
 /* ── Service icons ───────────────────────────────── */
 const IcoSound = () => (
@@ -62,6 +122,7 @@ interface ServicesSectionProps {
 export const ServicesSection = memo(function ServicesSection({ compact = false }: ServicesSectionProps) {
   const { t } = useTranslation()
   const gridRef = useRef<HTMLDivElement>(null)
+  const [activeVideo, setActiveVideo] = useState<{ src: string; title: string } | null>(null)
 
   useEffect(() => {
     const ctx = gsap.context(() => {
@@ -83,6 +144,14 @@ export const ServicesSection = memo(function ServicesSection({ compact = false }
 
   return (
     <Section id="services" dark compact={compact}>
+      {activeVideo && (
+        <VideoModal
+          src={activeVideo.src}
+          title={activeVideo.title}
+          onClose={() => setActiveVideo(null)}
+        />
+      )}
+
       {!compact && (
         <div className={styles.header}>
           <Badge variant="mist">{t('services.label')}</Badge>
@@ -112,6 +181,13 @@ export const ServicesSection = memo(function ServicesSection({ compact = false }
                 <span className={styles.metaVal}>{t(`services.${key}.price`)}</span>
               </div>
             </div>
+            <button
+              className={styles.videoBtn}
+              onClick={() => setActiveVideo({ src: VIDEO_MAP[key], title: t(`services.${key}.title`) })}
+            >
+              <IcoPlay />
+              {t('services.watch_video')}
+            </button>
             <a
               href={WA_LINK}
               className={[styles.bookLink, featured ? styles.bookLinkFeatured : ''].filter(Boolean).join(' ')}
